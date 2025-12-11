@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Athiti:wght@300;400;500;600;700&family=Varela+Round&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Portfolio Custom Colors */
+  --primary-green: #679436;
+  --primary-blue: #05668D;
+  --off-black: #141414;
+  --off-white: #F2F2F2;
+  
+  /* Tints (lighter versions) */
+  --green-tint: #7AAA4A;
+  --blue-tint: #1A7A9E;
+  
+  /* Shades (darker versions) */
+  --green-shade: #527528;
+  --blue-shade: #044D6B;
+  
+  /* Dark mode base */
+  --background: var(--off-black);
+  --foreground: var(--off-white);
+  --card: #1A1A1A;
+  --card-foreground: var(--off-white);
+  --popover: #1F1F1F;
+  --popover-foreground: var(--off-white);
+  --primary: var(--primary-green);
+  --primary-foreground: var(--off-white);
+  --secondary: var(--primary-blue);
+  --secondary-foreground: var(--off-white);
+  --muted: #2A2A2A;
+  --muted-foreground: #A0A0A0;
+  --accent: var(--primary-blue);
+  --accent-foreground: var(--off-white);
+  --destructive: #D32F2F;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.05);
+  --input-background: rgba(255, 255, 255, 0.03);
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: var(--primary-green);
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-primary-green: var(--primary-green);
+  --color-primary-blue: var(--primary-blue);
+  --color-green-tint: var(--green-tint);
+  --color-blue-tint: var(--blue-tint);
+  --color-green-shade: var(--green-shade);
+  --color-blue-shade: var(--blue-shade);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Varela Round', sans-serif;
+    background: linear-gradient(135deg, #0d0d0d 0%, #141414 50%, #0f1520 100%);
+    background-attachment: fixed;
+  }
+
+  h1 {
+    font-family: 'Arapey', serif;
+  }
+
+  h2, h3 {
+    font-family: 'Athiti', sans-serif;
+  }
+
+  p, span, div {
+    font-family: 'Varela Round', sans-serif;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+/* Glass effect utility classes */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-blue) 100%);
+}
+
+.gradient-glow {
+  background: radial-gradient(circle at center, rgba(103, 148, 54, 0.2) 0%, rgba(5, 102, 141, 0.2) 50%, transparent 100%);
+}
