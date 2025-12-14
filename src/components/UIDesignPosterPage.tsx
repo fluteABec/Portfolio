@@ -40,7 +40,7 @@ export function UIDesignPosterPage({ onBack }: UIDesignPosterPageProps) {
         {/* Hero Image */}
         <div className="glass rounded-3xl overflow-hidden mb-12">
           <img
-            src="/PochetteAlbum-NathanCourcelle.png"
+            src="/PochetteAlbum-NathanCourcelle.avif"
             alt="Visuel du post LinkedIn style pochette d'album"
             className="w-full h-auto object-contain"
           />
@@ -110,7 +110,7 @@ export function UIDesignPosterPage({ onBack }: UIDesignPosterPageProps) {
           <p className="text-[#A0A0A0] text-sm font-medium mb-3">Processus de création sur Affinity</p>
           <div className="glass rounded-3xl overflow-hidden">
             <img
-              src="/src/components/images/Page-Pochette-Affinity.png"
+              src="/src/components/images/Page-Pochette-Affinity.avif"
               alt="Création du visuel sur Affinity Designer"
               className="w-full h-auto object-cover"
             />
@@ -151,8 +151,8 @@ export function UIDesignPosterPage({ onBack }: UIDesignPosterPageProps) {
             Voir le post LinkedIn
           </a>
           <a 
-            href="/PochetteAlbum-NathanCourcelle.png"
-            download="PochetteAlbum-NathanCourcelle.png"
+            href="/PochetteAlbum-NathanCourcelle.avif"
+            download="PochetteAlbum-NathanCourcelle.avif"
             className="px-8 py-4 rounded-full glass-strong hover:bg-white/10 transition-all duration-200 flex items-center gap-2"
           >
             <Download className="w-5 h-5" />
