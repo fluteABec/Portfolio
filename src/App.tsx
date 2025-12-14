@@ -6,6 +6,7 @@ import { CVPage } from './components/CVPage';
 import { CabanesYourtesPage } from './components/CabanesYourtesPage';
 import { IUTDefensePage } from './components/IUTDefensePage';
 import { UIDesignPosterPage } from './components/UIDesignPosterPage';
+import { ClimbImprovePage } from './components/ClimbImprovePage';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -39,6 +40,7 @@ export default function App() {
         {currentPage === 'project-cabanes' && <CabanesYourtesPage onBack={() => setCurrentPage('projects')} />}
         {currentPage === 'project-iut' && <IUTDefensePage onBack={() => setCurrentPage('projects')} />}
         {currentPage === 'project-poster' && <UIDesignPosterPage onBack={() => setCurrentPage('projects')} />}
+        {currentPage === 'project-climbimprove' && <ClimbImprovePage onBack={() => setCurrentPage('projects')} />}
       </main>
 
       <Footer />

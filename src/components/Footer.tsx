@@ -10,12 +10,12 @@ export function Footer() {
               href="mailto:nathan.courcelle@example.com" 
               className="hover:text-[#679436] transition-colors duration-300"
             >
-              nathan.courcelle@example.com
+              nathan.5courcelle@gmail.com
             </a>
             <span className="w-1 h-1 rounded-full bg-[#679436]" />
-            <span>Front-End Developer</span>
+            <span>Devoloppeur Front-End</span>
             <span className="w-1 h-1 rounded-full bg-[#05668D]" />
-            <span>Based in France</span>
+            <span>France</span>
           </div>
         </div>
       </div>

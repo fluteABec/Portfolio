@@ -1,5 +1,4 @@
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface CabanesYourtesPageProps {
   onBack: () => void;
@@ -31,17 +30,17 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-5xl md:text-6xl mb-6 bg-gradient-to-r from-[#7AAA4A] to-[#679436] bg-clip-text text-transparent">
-            Cabanes et Yourtes
+            Cabanes et Yourtes de la Vallée de l'Ance
           </h1>
           <p className="text-xl text-[#A0A0A0]">
-            Site web pour hébergements écologiques en pleine nature
+            Site web pour hébergements insolites en pleine nature
           </p>
         </div>
 
         {/* Hero Image */}
         <div className="glass rounded-3xl overflow-hidden mb-12">
-          <ImageWithFallback
-            src="https://images.unsplash.com/photo-1627750168257-9a7d3965ef8b?w=1200"
+          <img
+            src="/src/components/images/Site-CYVA-hero.JPG"
             alt="Cabanes et Yourtes"
             className="w-full h-[400px] object-cover"
           />
@@ -52,9 +51,9 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
           <div className="glass rounded-3xl p-6">
             <h3 className="text-lg mb-2 text-[#679436]">Technologies</h3>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 rounded-full bg-white/5 text-sm">React</span>
-              <span className="px-3 py-1 rounded-full bg-white/5 text-sm">Tailwind CSS</span>
-              <span className="px-3 py-1 rounded-full bg-white/5 text-sm">Responsive</span>
+              <span className="px-3 py-1 rounded-full bg-white/5 text-sm">HTML</span>
+              <span className="px-3 py-1 rounded-full bg-white/5 text-sm">CSS</span>
+              <span className="px-3 py-1 rounded-full bg-white/5 text-sm">JavaScript</span>
             </div>
           </div>
 
@@ -65,7 +64,7 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
 
           <div className="glass rounded-3xl p-6">
             <h3 className="text-lg mb-2 text-[#679436]">Année</h3>
-            <p className="text-[#A0A0A0]">2024</p>
+            <p className="text-[#A0A0A0]">2025</p>
           </div>
         </div>
 
@@ -74,14 +73,12 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">À propos du projet</h2>
           <div className="space-y-4 text-[#A0A0A0]">
             <p>
-              Ce projet a pour objectif de promouvoir le tourisme écologique à travers une expérience web immersive.
-              Le site présente des hébergements insolites en pleine nature : cabanes dans les arbres, yourtes mongoles,
-              et autres logements respectueux de l'environnement.
+              Projet personnel à visée professionnelle consistant à concevoir et développer le site vitrine des hébergements touristiques Cabanes et Yourtes de la Vallée de l’Ance.
+Le site présente les logements, les activités locales et les disponibilités, avec une mise en avant de l’identité naturelle et artisanale du lieu.
             </p>
             <p>
-              L'interface a été conçue pour refléter l'atmosphère naturelle et paisible des lieux, avec une palette de
-              couleurs inspirée de la forêt et des matériaux organiques. La navigation intuitive permet aux visiteurs
-              de découvrir facilement les différents hébergements et leurs équipements.
+              Je réalise l’ensemble du processus : étude des besoins, zoning, wireframe, maquette sous Figma, intégration front-end (HTML, CSS, JavaScript) et mise en ligne. Le développement se fait en interaction continue avec les propriétaires pour ajuster le contenu et le design selon leurs retours.
+Le site est entièrement responsive et repose sur une palette naturelle de tons verts et bruns. Les images du site ont été prises sur place avec <a href="https://rccreation.fr" target="_blank" rel="noopener noreferrer">RC Creation</a>
             </p>
           </div>
         </div>
@@ -90,20 +87,56 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
         <div className="mb-12">
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">Galerie</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="glass rounded-3xl overflow-hidden h-64">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600"
-                alt="Nature environnante"
-                className="w-full h-full object-cover"
-              />
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">Conception du logo sur Affinity</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/src/components/images/Site-CYVA-Affinity.png"
+                  alt="Nature environnante"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-            <div className="glass rounded-3xl overflow-hidden h-64">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600"
-                alt="Vue d'ensemble"
-                className="w-full h-full object-cover"
-              />
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">Conception du wireframe sur Figma</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/src/components/images/Site-CYVA-wireframe.png"
+                  alt="Vue d'ensemble"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">Page 'Les Colibris'</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/src/components/images/Site-CYVA-colibris.png"
+                  alt="Vue d'ensemble"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">Page d'Accueil</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/src/components/images/Site-CYVA-hebergement.png"
+                  alt="Vue d'ensemble"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">Page 'Informations'</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/src/components/images/Site-CYVA-infos.png"
+                  alt="Vue d'ensemble"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+          </div>
           </div>
         </div>
 
@@ -113,11 +146,11 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
           <ul className="space-y-3 text-[#A0A0A0]">
             <li className="flex items-start gap-3">
               <span className="text-[#679436] mt-1">•</span>
-              <span>Galerie photo immersive avec système de navigation fluide</span>
+              <span>Système de navigation fluide</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-[#679436] mt-1">•</span>
-              <span>Intégration de système de réservation en ligne</span>
+              <span>Intégration dynamique de données pour les disponibilités</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-[#679436] mt-1">•</span>
@@ -136,14 +169,24 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
 
         {/* Action Buttons */}
         <div className="flex gap-4 justify-center">
-          <button className="px-8 py-4 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-200 flex items-center gap-2">
+          <a 
+            href="https://fluteabec.github.io/Cabanes-et-Yourtes/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-200 flex items-center gap-2"
+          >
             <ExternalLink className="w-5 h-5" />
             Voir le site
-          </button>
-          <button className="px-8 py-4 rounded-full glass-strong hover:bg-white/10 transition-all duration-200 flex items-center gap-2">
+          </a>
+          <a 
+            href="https://github.com/fluteABec/Cabanes-et-Yourtes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 rounded-full glass-strong hover:bg-white/10 transition-all duration-200 flex items-center gap-2"
+          >
             <Github className="w-5 h-5" />
             Voir le code
-          </button>
+          </a>
         </div>
       </div>
     </div>

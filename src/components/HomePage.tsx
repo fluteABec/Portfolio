@@ -18,7 +18,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
     
-    window.location.href = `mailto:nathan.courcelle@example.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:nathan.5courcelle@gmail.com?subject=${subject}&body=${body}`;
     
     // Reset form
     setFormData({ name: '', email: '', message: '' });
@@ -51,12 +51,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
             {/* Left Column - Text Content */}
             <div className="space-y-8">
               <h2 className="text-3xl md:text-4xl text-[#F2F2F2]">
-                Front-End Developer & UI/UX Enthusiast
+                Développeur Front-End UI/UX
               </h2>
 
               <p className="text-lg md:text-xl text-[#A0A0A0] leading-relaxed">
-                Crafting beautiful, responsive, and user-centric web experiences with modern technologies.
-                Passionate about clean code, innovative design, and pushing the boundaries of what&apos;s possible on the web.
+                Ma vision du développement web ? C'est la technologie au service de l'usage. Ça peut paraître bête mais on a tendance à l'oublier c'est pour ça que j'en fais le point principal de mes créations : Je crée des solutions pertinentes qui donnent exactement le résultat que l'on attend d'elle.
               </p>
 
               <button
@@ -73,7 +72,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#679436] to-[#05668D] rounded-full blur-xl opacity-50" />
                 <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 glass">
                   <img
-                    src="https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGhlYWRzaG90fGVufDF8fHx8MTc2NTI3NzI3MXww&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="/src/components/images/imageProfil.avif"
                     alt="Nathan Courcelle"
                     className="w-full h-full object-cover"
                   />
@@ -98,10 +97,10 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-5xl text-center mb-6 text-[#F2F2F2]">
-            Services
+            Mon savoir-faire
           </h2>
           <p className="text-center text-xl text-[#A0A0A0] mb-16 max-w-2xl mx-auto">
-            Des solutions digitales complètes, du design à la réalisation
+            Des solutions complètes, du design au déployement
           </p>
 
           {/* Two Column Layout */}
@@ -116,34 +115,36 @@ export function HomePage({ onNavigate }: HomePageProps) {
               </div>
 
               <p className="text-lg text-[#A0A0A0] mb-6 leading-relaxed">
-                Création de sites web modernes et performants avec les dernières technologies. 
-                De la simple landing page aux applications web complexes.
+                Conception de solutions web sur-mesure, de la simple page vitrine aux applications complexes
               </p>
 
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3 text-[#A0A0A0]">
                   <span className="text-[#7AAA4A] mt-1">✓</span>
-                  <span>Sites web responsive et optimisés</span>
+                  <span>Sites web responsive et accessibles</span>
                 </li>
                 <li className="flex items-start gap-3 text-[#A0A0A0]">
                   <span className="text-[#7AAA4A] mt-1">✓</span>
-                  <span>Applications web interactives (React, Next.js)</span>
+                  <span>Numérique responsable</span>
                 </li>
                 <li className="flex items-start gap-3 text-[#A0A0A0]">
                   <span className="text-[#7AAA4A] mt-1">✓</span>
-                  <span>Intégration d'APIs et services externes</span>
+                  <span>Optimisation technique (Vitesse de chargement & SEO)</span>
                 </li>
                 <li className="flex items-start gap-3 text-[#A0A0A0]">
                   <span className="text-[#7AAA4A] mt-1">✓</span>
-                  <span>Performance et SEO optimisés</span>
+                  <span>Gestion dynamique des données</span>               
                 </li>
               </ul>
 
               <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">React</span>
-                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">TypeScript</span>
-                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">Next.js</span>
-                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">Tailwind CSS</span>
+                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">HTML</span>
+                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">CSS</span>
+                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">JS</span>
+                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">Node.js</span>
+                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">Express.js</span>
+                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">Prisma (notions)</span>
+                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">MySQL</span>
               </div>
             </div>
 
@@ -157,8 +158,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               </div>
 
               <p className="text-lg text-[#A0A0A0] mb-6 leading-relaxed">
-                Conception d'interfaces utilisateur intuitives et esthétiques. 
-                Une expérience utilisateur optimale au service de vos objectifs.
+                Conception d'interfaces esthétiques et intuitives, prêtes à être intégrées
               </p>
 
               <ul className="space-y-3 mb-8">
@@ -168,11 +168,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 </li>
                 <li className="flex items-start gap-3 text-[#A0A0A0]">
                   <span className="text-[#1A7A9E] mt-1">✓</span>
-                  <span>Design systems et guidelines</span>
+                  <span>Conception centrée utilisateur</span>
                 </li>
                 <li className="flex items-start gap-3 text-[#A0A0A0]">
                   <span className="text-[#1A7A9E] mt-1">✓</span>
-                  <span>Recherche UX et tests utilisateurs</span>
+                  <span>Design responsive</span>
                 </li>
                 <li className="flex items-start gap-3 text-[#A0A0A0]">
                   <span className="text-[#1A7A9E] mt-1">✓</span>
@@ -182,9 +182,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
               <div className="flex flex-wrap gap-2">
                 <span className="px-4 py-2 rounded-full bg-[#05668D]/10 text-[#1A7A9E] text-sm">Figma</span>
-                <span className="px-4 py-2 rounded-full bg-[#05668D]/10 text-[#1A7A9E] text-sm">Adobe XD</span>
-                <span className="px-4 py-2 rounded-full bg-[#05668D]/10 text-[#1A7A9E] text-sm">Illustrator</span>
-                <span className="px-4 py-2 rounded-full bg-[#05668D]/10 text-[#1A7A9E] text-sm">Photoshop</span>
+                <span className="px-4 py-2 rounded-full bg-[#05668D]/10 text-[#1A7A9E] text-sm">Affinity</span>
               </div>
             </div>
           </div>
@@ -200,35 +198,32 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-6">
                 <Target className="w-12 h-12 text-[#679436]" />
-                <h2 className="text-5xl text-[#F2F2F2]">Life Goals & Ambition</h2>
+                <h2 className="text-5xl text-[#F2F2F2]">Objectifs & Ambitions</h2>
               </div>
 
               <p className="text-xl text-[#A0A0A0] mb-6 leading-relaxed">
-                My ambition is to create digital experiences that not only look stunning but also solve real problems 
-                and improve people&apos;s lives. I strive to bridge the gap between design and development, bringing 
-                creative visions to life with pixel-perfect precision.
+                Mon ambition est de mettre le numérique au service du savoir-faire local. Je souhaite permettre aux artisans et TPE d'avoir une vitrine digitale qui reflète la qualité réelle de leur travail.
               </p>
 
               <div className="flex items-start gap-4 mb-6">
                 <Rocket className="w-8 h-8 text-[#05668D] mt-1 flex-shrink-0" />
                 <p className="text-lg text-[#A0A0A0] leading-relaxed">
-                  I&apos;m dedicated to continuous learning, staying ahead of industry trends, and collaborating with 
-                  talented teams to build products that make a meaningful impact in the digital landscape.
-                </p>
+                  C'est cette quête de légitimité qui guide mon apprentissage rigoureux aujourd'hui : acquérir une maîtrise technique solide pour offrir, demain, une image digitale à la hauteur de leur talent.
+                  </p>
               </div>
 
               <div className="flex flex-wrap gap-4 mt-8">
                 <div className="glass rounded-full px-6 py-3">
-                  <span className="text-[#7AAA4A]">Innovation</span>
+                  <span className="text-[#7AAA4A]">Approche Hybride</span>
                 </div>
                 <div className="glass rounded-full px-6 py-3">
-                  <span className="text-[#1A7A9E]">User-Centric Design</span>
+                  <span className="text-[#1A7A9E]">Rigueur</span>
                 </div>
                 <div className="glass rounded-full px-6 py-3">
-                  <span className="text-[#7AAA4A]">Clean Code</span>
+                  <span className="text-[#7AAA4A]">Pertinence</span>
                 </div>
                 <div className="glass rounded-full px-6 py-3">
-                  <span className="text-[#1A7A9E]">Continuous Growth</span>
+                  <span className="text-[#1A7A9E]">Veille Technologique</span>
                 </div>
               </div>
             </div>
@@ -240,7 +235,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section id="contact" className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl text-center mb-16 text-[#F2F2F2]">
-            Get In Touch
+            Me contacter
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -248,7 +243,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <div className="glass rounded-3xl p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block mb-2 text-[#F2F2F2]">Name</label>
+                  <label htmlFor="name" className="block mb-2 text-[#F2F2F2]">Nom</label>
                   <input
                     type="text"
                     id="name"
@@ -287,7 +282,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   type="submit"
                   className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-200"
                 >
-                  Send Message
+                  Envoyer
                 </button>
               </form>
             </div>
@@ -299,31 +294,31 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 
                 <div className="space-y-4">
                   <a
-                    href="mailto:nathan.courcelle@example.com"
+                    href="mailto:nathan.5courcelle@gmail.com"
                     className="flex items-center gap-4 p-4 glass-strong rounded-full hover:bg-gradient-to-r hover:from-[#679436]/20 hover:to-[#05668D]/20 transition-all duration-200"
                   >
                     <Mail className="w-6 h-6 text-[#679436]" />
-                    <span className="text-[#F2F2F2]">nathan.courcelle@example.com</span>
+                    <span className="text-[#F2F2F2]">nathan.5courcelle@gmail.com</span>
                   </a>
 
                   <a
-                    href="https://github.com"
+                    href="https://github.com/fluteABec"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 glass-strong rounded-full hover:bg-gradient-to-r hover:from-[#679436]/20 hover:to-[#05668D]/20 transition-all duration-200"
                   >
                     <Github className="w-6 h-6 text-[#05668D]" />
-                    <span className="text-[#F2F2F2]">GitHub</span>
+                    <span className="text-[#F2F2F2]">Mon GitHub</span>
                   </a>
 
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/nathan-courcelle"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 glass-strong rounded-full hover:bg-gradient-to-r hover:from-[#679436]/20 hover:to-[#05668D]/20 transition-all duration-200"
                   >
                     <Linkedin className="w-6 h-6 text-[#679436]" />
-                    <span className="text-[#F2F2F2]">LinkedIn</span>
+                    <span className="text-[#F2F2F2]">Mon LinkedIn</span>
                   </a>
                 </div>
               </div>

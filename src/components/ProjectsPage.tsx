@@ -4,29 +4,39 @@ const projects = [
   {
     id: 1,
     slug: 'project-cabanes',
-    title: 'Cabanes et Yourtes',
-    description: 'A beautiful nature-themed website showcasing unique cabin and yurt accommodations. Features immersive galleries, booking integration, and a focus on eco-friendly tourism.',
-    image: 'https://images.unsplash.com/photo-1627750168257-9a7d3965ef8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b29kZW4lMjBjYWJpbiUyMG5hdHVyZSUyMGZvcmVzdHxlbnwxfHx8fDE3NjUyOTc1Njd8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['React', 'Tailwind', 'Responsive Design'],
+    title: 'Cabanes et Yourtes de la Vallée de l\'Ance',
+    description: 'Un site réalisé pour moderniser leur site web et le rendre plus utilisable avec une meilleure facilité d\'accès à l\'information, un projet qui vas de création de wireframe à déployement.',
+    image: '/src/components/images/Site-CYVA-ytradi.png',
+    tags: ['HTML', 'CSS', 'JS', 'Figma', 'Affinity', 'Responsive Design','Optimisation SEO'],
     color: 'from-[#679436] to-[#7AAA4A]'
   },
   {
     id: 2,
     slug: 'project-iut',
-    title: 'IUT Defense Management',
-    description: 'A comprehensive web application for managing university defense presentations. Includes scheduling, resource allocation, and real-time notifications for students and faculty.',
-    image: 'https://images.unsplash.com/photo-1575388902449-6bca946ad549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkYXNoYm9hcmQlMjB3ZWIlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzY1Mjk3NTY4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['TypeScript', 'Next.js', 'UI/UX Design'],
+    title: 'Application de gestion de soutenance',
+    description: 'Projet universitaire en équipe, avec pour objectif de créer une application web permettant de faciliter la gestion de soutenance de l\'IUT.',
+    image: '/src/components/images/Site-Soutenance-hero.png',
+    tags: ['HTML', 'CSS', 'PHP', 'MySQL'],
     color: 'from-[#05668D] to-[#1A7A9E]'
   },
   {
     id: 3,
     slug: 'project-poster',
-    title: 'UI Design Poster',
-    description: 'A creative poster-style visual CV that combines album cover aesthetics with professional portfolio presentation. Showcases skills, experience, and personality in an artistic format.',
-    image: 'https://images.unsplash.com/photo-1631786170318-ef467b60ef9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGFsYnVtJTIwY292ZXIlMjBkZXNpZ258ZW58MXx8fHwxNzY1Mjk3NTY4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['Figma', 'Graphic Design', 'Branding'],
-    color: 'from-[#679436] to-[#05668D]'
+    title: 'Poster LinkedIn',
+    description: 'Un poster réalisé dans le cadre de ma recherche de stage, pour promouvoir mon profil sur linkedIn, de manière originale en me servant du thème "Musique".',
+    image: '/src/components/images/PochetteAlbum-NathanCourcelle.png',
+    tags: ['Affinity'],
+    color: 'from-[#679436] to-[#05668D]'  
+  }
+  ,
+  {
+    id: 4,
+    slug: 'project-climbimprove',
+    title: 'ClimbImprove',
+    description: "Projet conceptuel visant à révolutionner l'escalade grâce à l'IA et aux objets connectés. Site web vitrine présentant un écosystème complet d'analyse biomécanique et de coaching personnalisé.",
+    image: '/src/components/images/Site-ClimbImprove2.png',
+    tags: ['FigmaMake', 'IA'],
+    color: 'from-[#7A4ACB] to-[#4A90E2]'
   }
 ];
 
@@ -50,10 +60,10 @@ export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
           <h1 className="text-6xl md:text-7xl mb-6 bg-gradient-to-r from-[#7AAA4A] to-[#1A7A9E] bg-clip-text text-transparent">
-            Featured Projects
+            Mes Projets
           </h1>
           <p className="text-xl text-[#A0A0A0] max-w-2xl mx-auto">
-            A curated selection of my best work, showcasing creativity, technical expertise, and attention to detail.
+            Une sélection de projets réalisé dans un cadre universitaire ou purement personnel
           </p>
         </div>
 
@@ -63,7 +73,10 @@ export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
           <div className="group">
             <div className="glass rounded-3xl overflow-hidden hover:glass-strong transition-all duration-300">
               <div className="grid md:grid-cols-2 gap-0">
-                <div className="relative h-80 md:h-[500px] overflow-hidden">
+                <div 
+                  className="relative h-80 md:h-[500px] overflow-hidden cursor-pointer"
+                  onClick={() => onNavigate(projects[0].slug)}
+                >
                   <img
                     src={projects[0].image}
                     alt={projects[0].title}
@@ -108,7 +121,10 @@ export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
             {projects.slice(1).map((project) => (
               <div key={project.id} className="group">
                 <div className="glass rounded-3xl overflow-hidden hover:glass-strong transition-all duration-300 h-full">
-                  <div className="relative h-64 overflow-hidden">
+                  <div 
+                    className="relative h-64 overflow-hidden cursor-pointer"
+                    onClick={() => onNavigate(project.slug)}
+                  >
                     <img
                       src={project.image}
                       alt={project.title}
@@ -151,14 +167,14 @@ export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
         {/* Call to Action */}
         <div className="text-center mt-20">
           <p className="text-lg text-[#A0A0A0] mb-6">
-            Interested in working together or learning more about these projects?
+            Si vous souhaitez en apprendre plus sur mes projets 
           </p>
-          <a
-            href="#contact"
+          <button
+            onClick={() => onNavigate('contact')}
             className="inline-block px-10 py-5 rounded-full glass-strong hover:bg-gradient-to-r hover:from-[#679436] hover:to-[#05668D] transition-all duration-200"
           >
-            Let&apos;s Connect
-          </a>
+            Contactez Moi
+          </button>
         </div>
       </div>
     </div>
