@@ -3,7 +3,7 @@ export function Footer() {
     <footer className="border-t border-white/5 py-6">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-[#A0A0A0]">
-
+          <span></span>
           <div className="flex items-center gap-6">
             <p className="pl-4">© 2025 Nathan Courcelle. All rights reserved.</p>
             <span className="w-1 h-1 rounded-full bg-[#05668D]" />
