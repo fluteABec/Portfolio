@@ -104,7 +104,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#679436] to-[#05668D] rounded-full blur-xl opacity-50" />
                 <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 glass">
                   <img
-                    src="/src/components/images/imageProfil.avif"
+                    src="/images/imageProfil.avif"
                     alt="Nathan Courcelle"
                     className="w-full h-full object-cover"
                   />

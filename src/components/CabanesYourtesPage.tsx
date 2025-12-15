@@ -40,7 +40,7 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
         {/* Hero Image */}
         <div className="glass rounded-3xl overflow-hidden mb-12">
           <img
-            src="/src/components/images/Site-CYVA-hero.avif"
+            src="/images/Site-CYVA-hero.avif"
             alt="Cabanes et Yourtes"
             className="w-full h-[400px] object-cover"
           />
@@ -91,7 +91,7 @@ Le site est entièrement responsive et repose sur une palette naturelle de tons 
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Conception du logo sur Affinity</p>
               <div className="glass rounded-3xl overflow-hidden h-64">
                 <img
-                  src="/src/components/images/Site-CYVA-Affinity.avif"
+                  src="/images/Site-CYVA-Affinity.avif"
                   alt="Nature environnante"
                   className="w-full h-full object-cover"
                 />
@@ -101,7 +101,7 @@ Le site est entièrement responsive et repose sur une palette naturelle de tons 
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Conception du wireframe sur Figma</p>
               <div className="glass rounded-3xl overflow-hidden h-64">
                 <img
-                  src="/src/components/images/Site-CYVA-wireframe.avif"
+                  src="/images/Site-CYVA-wireframe.avif"
                   alt="Vue d'ensemble"
                   className="w-full h-full object-cover"
                 />
@@ -111,7 +111,7 @@ Le site est entièrement responsive et repose sur une palette naturelle de tons 
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Page 'Les Colibris'</p>
               <div className="glass rounded-3xl overflow-hidden h-64">
                 <img
-                  src="/src/components/images/Site-CYVA-colibris.avif"
+                  src="/images/Site-CYVA-colibris.avif"
                   alt="Vue d'ensemble"
                   className="w-full h-full object-cover"
                 />
@@ -121,7 +121,7 @@ Le site est entièrement responsive et repose sur une palette naturelle de tons 
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Page d'Accueil</p>
               <div className="glass rounded-3xl overflow-hidden h-64">
                 <img
-                  src="/src/components/images/Site-CYVA-hebergement.avif"
+                  src="/images/Site-CYVA-hebergement.avif"
                   alt="Vue d'ensemble"
                   className="w-full h-full object-cover"
                 />
@@ -131,7 +131,7 @@ Le site est entièrement responsive et repose sur une palette naturelle de tons 
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Page 'Informations'</p>
               <div className="glass rounded-3xl overflow-hidden h-64">
                 <img
-                  src="/src/components/images/Site-CYVA-infos.avif"
+                  src="/images/Site-CYVA-infos.avif"
                   alt="Vue d'ensemble"
                   className="w-full h-full object-cover"
                 />

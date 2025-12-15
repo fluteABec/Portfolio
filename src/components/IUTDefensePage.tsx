@@ -40,7 +40,7 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
         {/* Hero Image */}
         <div className="glass rounded-3xl overflow-hidden mb-12">
           <img
-            src="/src/components/images/Site-Soutenance-hero.avif"
+            src="/images/Site-Soutenance-hero.avif"
             alt="Gestion des Soutenances IUT"
             className="w-full h-[400px] object-cover"
           />
@@ -99,7 +99,7 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Interface Back-office - Diffusion des résultat</p>
               <div className="glass rounded-3xl overflow-hidden h-64">
                 <img
-                  src="/src/components/images/Site-Soutenance-back1.avif"
+                  src="/images/Site-Soutenance-back1.avif"
                   alt="Back-office gestion"
                   className="w-full h-full object-cover"
                 />
@@ -109,7 +109,7 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Interface Front-office Professeur</p>
               <div className="glass rounded-3xl overflow-hidden h-64">
                 <img
-                  src="/src/components/images/Site-Soutenance-back2.avif"
+                  src="/images/Site-Soutenance-back2.avif"
                   alt="Grilles d'évaluation"
                   className="w-full h-full object-cover"
                 />
@@ -119,7 +119,7 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Interface Back-office - Grilles de notations</p>
               <div className="glass rounded-3xl overflow-hidden h-64">
                 <img
-                  src="/src/components/images/Site-Soutenance-front.avif"
+                  src="/images/Site-Soutenance-front.avif"
                   alt="Front-office étudiant"
                   className="w-full h-full object-cover"
                 />
@@ -129,7 +129,7 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Structure de la base de données MySQL</p>
               <div className="glass rounded-3xl overflow-hidden h-64">
                 <img
-                  src="/src/components/images/Site-Soutenance-SQL.avif"
+                  src="/images/Site-Soutenance-SQL.avif"
                   alt="Base de données SQL"
                   className="w-full h-full object-cover"
                 />

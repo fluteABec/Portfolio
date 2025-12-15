@@ -41,7 +41,7 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
         {/* Hero Image */}
         <div className="glass rounded-3xl overflow-hidden mb-12">
           <img
-            src="/src/components/images/Site-ClimbImprove1.avif"
+            src="/images/Site-ClimbImprove1.avif"
             alt="ClimbImprove Hero"
             className="w-full h-[400px] object-cover"
           />
@@ -98,7 +98,7 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Interface - Analyse & Accueil</p>
               <div className="glass rounded-3xl overflow-hidden h-64">
                 <img
-                  src="/src/components/images/Site-ClimbImprove1.avif"
+                  src="/images/Site-ClimbImprove1.avif"
                   alt="Site ClimbImprove Accueil"
                   className="w-full h-full object-cover"
                 />
@@ -108,7 +108,7 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Détail des fonctionnalités</p>
               <div className="glass rounded-3xl overflow-hidden h-64">
                 <img
-                  src="/src/components/images/Site-ClimbImprove2.avif"
+                  src="/images/Site-ClimbImprove2.avif"
                   alt="Site ClimbImprove Features"
                   className="w-full h-full object-cover"
                 />
@@ -118,7 +118,7 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
               <p className="text-[#A0A0A0] text-sm font-medium mb-3">Présentation globale du concept</p>
               <div className="glass rounded-3xl overflow-hidden h-80">
                 <img
-                  src="/src/components/images/Site-ClimbImprove3.avif"
+                  src="/images/Site-ClimbImprove3.avif"
                   alt="Site ClimbImprove Global"
                   className="w-full h-full object-cover"
                 />

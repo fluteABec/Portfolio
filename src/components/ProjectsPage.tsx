@@ -6,7 +6,7 @@ const projects = [
     slug: 'project-cabanes',
     title: 'Cabanes et Yourtes de la Vallée de l\'Ance',
     description: 'Un site réalisé pour moderniser leur site web et le rendre plus utilisable avec une meilleure facilité d\'accès à l\'information, un projet qui vas de création de wireframe à déployement.',
-    image: '/src/components/images/Site-CYVA-ytradi.avif',
+    image: '/images/Site-CYVA-ytradi.avif',
     tags: ['HTML', 'CSS', 'JS', 'Figma', 'Affinity', 'Responsive Design','Optimisation SEO'],
     color: 'from-[#679436] to-[#7AAA4A]'
   },
@@ -15,7 +15,7 @@ const projects = [
     slug: 'project-iut',
     title: 'Application de gestion de soutenance',
     description: 'Projet universitaire en équipe, avec pour objectif de créer une application web permettant de faciliter la gestion de soutenance de l\'IUT.',
-    image: '/src/components/images/Site-Soutenance-hero.avif',
+    image: '/images/Site-Soutenance-hero.avif',
     tags: ['HTML', 'CSS', 'PHP', 'MySQL'],
     color: 'from-[#05668D] to-[#1A7A9E]'
   },
@@ -24,7 +24,7 @@ const projects = [
     slug: 'project-poster',
     title: 'Poster LinkedIn',
     description: 'Un poster réalisé dans le cadre de ma recherche de stage, pour promouvoir mon profil sur linkedIn, de manière originale en me servant du thème "Musique".',
-    image: '/src/components/images/PochetteAlbum-NathanCourcelle.avif',
+    image: '/images/PochetteAlbum-NathanCourcelle.avif',
     tags: ['Affinity'],
     color: 'from-[#679436] to-[#05668D]'  
   }
@@ -34,7 +34,7 @@ const projects = [
     slug: 'project-climbimprove',
     title: 'ClimbImprove',
     description: "Projet conceptuel visant à révolutionner l'escalade grâce à l'IA et aux objets connectés. Site web vitrine présentant un écosystème complet d'analyse biomécanique et de coaching personnalisé.",
-    image: '/src/components/images/Site-ClimbImprove2.avif',
+    image: '/images/Site-ClimbImprove2.avif',
     tags: ['FigmaMake', 'IA'],
     color: 'from-[#7A4ACB] to-[#4A90E2]'
   }

@@ -110,7 +110,7 @@ export function UIDesignPosterPage({ onBack }: UIDesignPosterPageProps) {
           <p className="text-[#A0A0A0] text-sm font-medium mb-3">Processus de création sur Affinity</p>
           <div className="glass rounded-3xl overflow-hidden">
             <img
-              src="/src/components/images/Page-Pochette-Affinity.avif"
+              src="/images/Page-Pochette-Affinity.avif"
               alt="Création du visuel sur Affinity Designer"
               className="w-full h-auto object-cover"
             />
