@@ -1,27 +1,59 @@
 import { motion } from 'motion/react';
-import { Code2, Palette, Zap, Github, Linkedin, Mail, FileDown, Target, Rocket, Monitor, Layers } from 'lucide-react';
+import { Code2, Palette, Zap, Github, Linkedin, Mail, FileDown, Target, Rocket, Monitor, Layers, Send, User, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 interface HomePageProps {
   onNavigate: (page: string) => void;
 }
 
 export function HomePage({ onNavigate }: HomePageProps) {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Contact from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    
-    window.location.href = `mailto:nathan.5courcelle@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    setStatus('sending');
+    setErrorMessage('');
+
+    try {
+      // Configuration EmailJS
+      await emailjs.send(
+        'service_k0dttkt',
+        'template_2swzvnp',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'NsoIuxi7uwwUirBP7'
+      );
+
+      setStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      
+      // Reset le status après 5 secondes
+      setTimeout(() => setStatus('idle'), 5000);
+    } catch (error) {
+      setStatus('error');
+      setErrorMessage('Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.');
+      console.error('EmailJS Error:', error);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   return (
@@ -241,48 +273,112 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Form */}
             <div className="glass rounded-3xl p-8">
+              <h3 className="text-2xl font-bold text-[#F2F2F2] mb-6 flex items-center gap-2">
+                <MessageSquare className="w-6 h-6 text-[#679436]" />
+                Envoyez un message
+              </h3>
+
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name Input */}
                 <div>
-                  <label htmlFor="name" className="block mb-2 text-[#F2F2F2]">Nom</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-[#A0A0A0] mb-2">
+                    Nom complet *
+                  </label>
                   <input
                     type="text"
                     id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-full glass-strong focus:outline-none focus:ring-2 focus:ring-[#679436] bg-transparent text-[#F2F2F2]"
+                    name="name"
                     required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-[#F2F2F2] placeholder-[#A0A0A0] focus:outline-none focus:border-[#679436] transition-colors"
+                    placeholder="Votre nom"
                   />
                 </div>
 
+                {/* Email Input */}
                 <div>
-                  <label htmlFor="email" className="block mb-2 text-[#F2F2F2]">Email</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-[#A0A0A0] mb-2">
+                    Email *
+                  </label>
                   <input
                     type="email"
                     id="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-full glass-strong focus:outline-none focus:ring-2 focus:ring-[#679436] bg-transparent text-[#F2F2F2]"
+                    name="email"
                     required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-[#F2F2F2] placeholder-[#A0A0A0] focus:outline-none focus:border-[#679436] transition-colors"
+                    placeholder="votre.email@exemple.com"
                   />
                 </div>
 
+                {/* Subject Input */}
                 <div>
-                  <label htmlFor="message" className="block mb-2 text-[#F2F2F2]">Message</label>
+                  <label htmlFor="subject" className="block text-sm font-medium text-[#A0A0A0] mb-2">
+                    Sujet *
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    required
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-[#F2F2F2] placeholder-[#A0A0A0] focus:outline-none focus:border-[#679436] transition-colors"
+                    placeholder="Objet de votre message"
+                  />
+                </div>
+
+                {/* Message Textarea */}
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-[#A0A0A0] mb-2">
+                    Message *
+                  </label>
                   <textarea
                     id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-3xl glass-strong focus:outline-none focus:ring-2 focus:ring-[#679436] bg-transparent text-[#F2F2F2] resize-none"
+                    name="message"
                     required
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={5}
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-[#F2F2F2] placeholder-[#A0A0A0] focus:outline-none focus:border-[#679436] transition-colors resize-none"
+                    placeholder="Votre message..."
                   />
                 </div>
 
+                {/* Status Messages */}
+                {status === 'success' && (
+                  <div className="flex items-center gap-2 p-4 bg-[#679436]/20 border border-[#679436]/30 rounded-xl text-[#679436]">
+                    <CheckCircle className="w-5 h-5" />
+                    <p className="text-sm">Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.</p>
+                  </div>
+                )}
+
+                {status === 'error' && (
+                  <div className="flex items-start gap-2 p-4 bg-red-500/20 border border-red-500/30 rounded-xl text-red-400">
+                    <AlertCircle className="w-5 h-5 mt-0.5" />
+                    <p className="text-sm">{errorMessage}</p>
+                  </div>
+                )}
+
+                {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-200"
+                  disabled={status === 'sending'}
+                  className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-[#679436] to-[#7AAA4A] hover:from-[#7AAA4A] hover:to-[#679436] text-white font-medium transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  Envoyer
+                  {status === 'sending' ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      Envoi en cours...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      Envoyer le message
+                    </>
+                  )}
                 </button>
               </form>
             </div>
