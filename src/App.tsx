@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { LanguageProvider } from './contexts/LanguageContext';
 import { Sidebar } from './components/Sidebar';
 import { HomePage } from './components/HomePage';
 import { ProjectsPage } from './components/ProjectsPage';
@@ -30,20 +31,22 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Sidebar currentPage={currentPage} onNavigate={handleNavigate} />
-      
-      <main className="flex-1 ml-20">
-        {currentPage === 'home' && <HomePage onNavigate={handleNavigate} />}
-        {currentPage === 'projects' && <ProjectsPage onNavigate={handleNavigate} />}
-        {currentPage === 'cv' && <CVPage />}
-        {currentPage === 'project-cabanes' && <CabanesYourtesPage onBack={() => setCurrentPage('projects')} />}
-        {currentPage === 'project-iut' && <IUTDefensePage onBack={() => setCurrentPage('projects')} />}
-        {currentPage === 'project-poster' && <UIDesignPosterPage onBack={() => setCurrentPage('projects')} />}
-        {currentPage === 'project-climbimprove' && <ClimbImprovePage onBack={() => setCurrentPage('projects')} />}
-      </main>
+    <LanguageProvider>
+      <div className="min-h-screen flex flex-col">
+        <Sidebar currentPage={currentPage} onNavigate={handleNavigate} />
+        
+        <main className="flex-1 ml-20">
+          {currentPage === 'home' && <HomePage onNavigate={handleNavigate} />}
+          {currentPage === 'projects' && <ProjectsPage onNavigate={handleNavigate} />}
+          {currentPage === 'cv' && <CVPage />}
+          {currentPage === 'project-cabanes' && <CabanesYourtesPage onBack={() => setCurrentPage('projects')} />}
+          {currentPage === 'project-iut' && <IUTDefensePage onBack={() => setCurrentPage('projects')} />}
+          {currentPage === 'project-poster' && <UIDesignPosterPage onBack={() => setCurrentPage('projects')} />}
+          {currentPage === 'project-climbimprove' && <ClimbImprovePage onBack={() => setCurrentPage('projects')} />}
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 }

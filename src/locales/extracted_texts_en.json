@@ -1,0 +1,363 @@
+{
+  "HomePage": {
+    "title": "Nathan Courcelle",
+    "hero": {
+      "subtitle": "Frontend UI/UX Developer",
+      "description": "My vision of web development? Technology at the service of usability. It might sound obvious, but it is often overlooked. That's why I make it the core of my work: creating relevant solutions that deliver exactly the results expected of them.",
+      "cta": "View my projects",
+      "imageAlt": "Nathan Courcelle"
+    },
+    "skills": {
+      "title": "My Expertise",
+      "subtitle": "Complete solutions, from design to deployment",
+      "webDev": {
+        "title": "Web Development",
+        "description": "Designing custom web solutions, from simple showcase pages to complex applications",
+        "features": [
+          "Responsive and accessible websites",
+          "Sustainable digital practices",
+          "Technical optimization (Loading speed & SEO)",
+          "Dynamic data management"
+        ],
+        "tech": ["HTML","CSS","JS","Node.js","Express.js","Prisma (basics)","MySQL"]
+      },
+      "design": {
+        "title": "UI/UX Design",
+        "description": "Designing aesthetic and intuitive interfaces, ready for integration",
+        "features": [
+          "Interactive mockups and prototypes",
+          "User-centric design",
+          "Responsive design",
+          "Visual identity and branding"
+        ],
+        "tech": ["Figma","Affinity"]
+      }
+    },
+    "ambition": {
+      "title": "Goals & Ambitions",
+      "text1": "My ambition is to leverage digital tools for local craftsmanship. I want to enable artisans and small businesses to have a digital showcase that reflects the true quality of their work.",
+      "text2": "It is this quest for legitimacy that guides my rigorous learning today: acquiring solid technical mastery to offer, tomorrow, a digital image worthy of their talent.",
+      "tags": ["Hybrid Approach", "Rigor", "Relevance", "Tech Watch"]
+    },
+    "contact": {
+      "title": "Contact Me",
+      "formTitle": "Send a message",
+      "form": {
+        "nameLabel": "Full Name *",
+        "namePlaceholder": "Your name",
+        "emailLabel": "Email *",
+        "emailPlaceholder": "your.email@example.com",
+        "subjectLabel": "Subject *",
+        "subjectPlaceholder": "Subject of your message",
+        "messageLabel": "Message *",
+        "messagePlaceholder": "Your message...",
+        "submit": "Send message",
+        "sending": "Sending...",
+        "success": "Message sent successfully! I will get back to you as soon as possible.",
+        "error": "An error occurred. Please try again or contact me directly via email."
+      },
+      "connectTitle": "Connect With Me",
+      "github": "My GitHub",
+      "linkedin": "My LinkedIn",
+      "cv": "Download CV / View Resume",
+      "contactButton": "Contact Me"
+    }
+  },
+  "ProjectsPage": {
+    "pageTitle": "My Projects",
+    "subtitle": "A selection of projects realized within a university or purely personal framework",
+    "projects": [
+      {
+        "title": "Cabanes et Yourtes de la Vallée de l'Ance",
+        "description": "A website created to modernize their online presence, making information more accessible and usable. A project ranging from wireframing to final deployment.",
+        "tags": ["HTML","CSS","JS","Figma","Affinity","Responsive Design","SEO Optimization"],
+        "cta": "View Project"
+      },
+      {
+        "title": "Defense Management Application",
+        "description": "A team university project aimed at creating a web application to facilitate the management of academic defenses at the IUT.",
+        "tags": ["HTML","CSS","PHP","MySQL"],
+        "cta": "View Project"
+      },
+      {
+        "title": "LinkedIn Poster",
+        "description": "A poster created for my internship search to promote my profile on LinkedIn in an original way, using a \"Music\" theme.",
+        "tags": ["Affinity"],
+        "cta": "View Project"
+      },
+      {
+        "title": "ClimbImprove",
+        "description": "A conceptual project aiming to revolutionize climbing through AI and IoT. A showcase website presenting a complete ecosystem of biomechanical analysis and personalized coaching.",
+        "tags": ["FigmaMake","AI"],
+        "cta": "View Project"
+      }
+    ],
+    "ctaContact": "Contact Me",
+    "learnMore": "If you wish to learn more about my projects"
+  },
+  "CVPage": {
+    "name": "Nathan Courcelle",
+    "title": "Web Developer",
+    "age": "Age: 18",
+    "location": "Le Puy-en-Velay, France",
+    "email": "nathan.5courcelle@gmail.com",
+    "description": "Currently training as a Web Developer, I chose this field to express my creativity. I have a particular focus on frontend development. I find it rewarding to turn wireframes into websites that prioritize both UI and UX.",
+    "downloadCV": "Download Resume",
+    "educationTitle": "Education",
+    "skillsTitle": "Skills",
+    "languagesTitle": "Languages",
+    "experienceTitle": "Experience",
+    "interestsTitle": "Interests",
+    "education": [
+      {
+        "degree": "University Bachelor of Technology (B.U.T.)",
+        "school": "IUT Clermont Auvergne, Le Puy-en-Velay Campus",
+        "location": "Le Puy-en-Velay, France",
+        "period": "2024 - 2027",
+        "description": "Degree in Web Development and IT, specializing in Frontend and UX/UI."
+      },
+      {
+        "degree": "French Baccalauréat (High School Diploma)",
+        "school": "Lycée Charles et Adrien Dupuy",
+        "location": "Le Puy-en-Velay, France",
+        "period": "2024",
+        "description": "Specialties: Mathematics, Computer Science, and History-Geopolitics."
+      }
+    ],
+    "skills": [
+      {
+        "category": "Web & Software Development",
+        "items": ["HTML - CSS - JavaScript","Node.js - Express.js","Python","C++","Technical requirements analysis","Architecture design","Responsive interface development","Unit testing and debugging","Version control (Git)"]
+      },
+      {
+        "category": "Databases & Tools",
+        "items": ["MySQL","phpMyAdmin","VS Code","VS Studio 2022","GitHub","Figma","Affinity","Data management and integrity","Performance optimization"]
+      },
+      {
+        "category": "UX/UI & Integration",
+        "items": ["User-centric interfaces","Collaboration with designers","Visual experience improvement","Graphic element integration","SEO Optimization","Web standards"]
+      },
+      {
+        "category": "Project Management",
+        "items": ["Competitive analysis","Needs analysis","Writing specifications","Technical documentation","Teamwork","Communication"]
+      }
+    ],
+    "languages": [
+      {"name":"English","level":"Upper Intermediate (B2)"},
+      {"name":"Italian","level":"Basic (A2)"}
+    ],
+    "experiences": [
+      {
+        "role": "Seasonal General Staff",
+        "company": "Forteresse de Saint-Vidal",
+        "location": "Saint-Vidal, France",
+        "period": "2025",
+        "description": "Multipurpose role within a historical tourist site.",
+        "achievements": ["Visitor reception and tavern service","Room and garden maintenance","Leading guided tours","Artistic performance as an actor"]
+      },
+      {
+        "role": "Hospitality Assistant",
+        "company": "Cabanes et Yourtes de la Vallée de l'Ance",
+        "location": "Sauvessanges, France",
+        "period": "2022 - 2024",
+        "description": "Full management of reception and services in eco-friendly accommodations.",
+        "achievements": ["Guest reception and front desk management","Site orientation and facility presentation","Meal basket and breakfast preparation","Maintenance of cabins, yurts, and outdoor areas"]
+      },
+      {
+        "role": "Team Leader Shadowing (Internship)",
+        "company": "Clauger",
+        "location": "Cournon d'Auvergne, France",
+        "period": "2021",
+        "description": "Discovery internship in the industrial refrigeration sector.",
+        "achievements": ["Introduction to industrial refrigeration concepts","Observation of manufacturing processes and quality checks","Introduction to automation","Field experience in cheese factories"]
+      }
+    ],
+    "interests": [
+      {"title":"Bouldering","description":"My favorite challenge is applying my technique to overhangs!"},
+      {"title":"Amateur Guitarist","description":"My goal? Mastering Coldplay’s 'Clocks' to play in a trio with friends."},
+      {"title":"Cooking / Baking","description":"My lasagna is unbeatable!"}
+    ]
+  },
+  "CabanesYourtesPage": {
+    "backButton": "Back to projects",
+    "title": "Cabanes et Yourtes de la Vallée de l'Ance",
+    "subtitle": "Website for unique nature accommodations",
+    "heroImageAlt": "Cabins and Yurts",
+    "techTitle": "Technologies",
+    "roleTitle": "Role",
+    "role": "Design & Frontend Development",
+    "yearTitle": "Year",
+    "year": "2025",
+    "aboutTitle": "About the project",
+    "aboutParagraphs": [
+      "A personal project with a professional scope consisting of designing and developing the showcase website for the tourist accommodations 'Cabanes et Yourtes de la Vallée de l’Ance'. The site presents the lodgings, local activities, and availability, highlighting the natural and artisanal identity of the place.",
+      "I handled the entire process: needs analysis, zoning, wireframing, Figma mockups, frontend integration (HTML, CSS, JavaScript), and deployment. Development was done in continuous interaction with the owners to adjust content and design according to their feedback. The site is fully responsive and relies on a natural palette of green and brown tones. Site images were taken on location with RC Creation."
+    ],
+    "galleryTitle": "Gallery",
+    "galleryItems": [
+      {"caption":"Logo design on Affinity","alt":"Surrounding nature"},
+      {"caption":"Wireframe design on Figma","alt":"Overview"},
+      {"caption":"'Les Colibris' Page","alt":"Overview"},
+      {"caption":"Home Page","alt":"Overview"},
+      {"caption":"'Information' Page","alt":"Overview"}
+    ],
+    "featuresTitle": "Main Features",
+    "features": [
+      "Smooth navigation system",
+      "Dynamic data integration for availability",
+      "Responsive design adapted to all devices",
+      "SEO optimization for organic search",
+      "Subtle animations to enhance user experience"
+    ],
+    "ctaSite": "View Website",
+    "ctaCode": "View Code"
+  },
+  "IUTDefensePage": {
+    "backButton": "Back to projects",
+    "title": "IUT Defense Management",
+    "subtitle": "Web application for managing internship evaluations for the IT Department",
+    "heroImageAlt": "IUT Defense Management",
+    "techTitle": "Technologies",
+    "roleTitle": "Role",
+    "role": "Frontend Developer & CSS Designer",
+    "yearTitle": "Year",
+    "year": "2025",
+    "aboutTitle": "About the project",
+    "aboutParagraphs": [
+      "A team project realized during the second year of the IT Degree. The objective was to design a web application centralizing the complete management of internship and apprenticeship defenses: jury assignment, entry and consultation of evaluation grids, grade tracking, account administration (professors, students), automation of internal tasks (emails, data uploads), as well as data security work.",
+      "I developed the professor's dashboard (personalized view of upcoming and past defenses, dynamic sorting) and handled the complete design integration (global CSS compliant with the IUT graphic charter).",
+      "A collaborative project lasting over a month using agile methodology, with GitHub for version control and VS Code for development."
+    ],
+    "galleryTitle": "Interface Overview",
+    "galleryItems": [
+      {"caption":"Back-office Interface - Result distribution","alt":"Back-office management"},
+      {"caption":"Professor Front-office Interface","alt":"Evaluation grids"},
+      {"caption":"Back-office Interface - Grading grids","alt":"Student front-office"},
+      {"caption":"MySQL Database Structure","alt":"SQL Database"}
+    ],
+    "featuresTitle": "Main Features",
+    "features": {
+      "admin": [
+        "Dashboard with statistics and indicators",
+        "Defense management (rooms, slots, juries)",
+        "Grade submission and validation",
+        "CSV export and automatic email sending",
+        "Creation and management of evaluation grids",
+        "User administration and access rights"
+      ],
+      "student": [
+        "Consultation of personal internship information",
+        "Visualization of assigned evaluation grids",
+        "Detailed view of grades by criteria",
+        "Access to jury comments",
+        "Complete evaluation history",
+        "Real-time evaluation status tracking"
+      ]
+    },
+    "technicalTitle": "Technical Aspects",
+    "technical": {
+      "backend": [
+        "PHP with MVC architecture",
+        "MySQL with prepared statements (security)",
+        "PHPMailer for automated emails",
+        "Secure authentication system with sessions"
+      ],
+      "frontend": [
+        "HTML5 & CSS3",
+        "PHP for dynamic interactivity",
+        "DataTables for data tables",
+        "Design compliant with IUT graphic charter"
+      ]
+    },
+    "ctaCode": "View Code"
+  },
+  "UIDesignPosterPage": {
+    "backButton": "Back to projects",
+    "title": "Album Cover CV",
+    "subtitle": "LinkedIn Campaign & Personal Branding - Concept Album",
+    "heroImageAlt": "Visual of the LinkedIn post album cover style",
+    "toolsTitle": "Tools",
+    "contextTitle": "Context",
+    "context": "IT Bachelor (2nd year)",
+    "objectiveTitle": "Objective",
+    "objective": "Web Dev Internship Search",
+    "aboutTitle": "About the project",
+    "aboutParagraphs": [
+      "As part of the \"Personal and Professional Project\" module, I designed a disruptive internship search campaign for April 2025. Rather than simply posting a PDF resume, I chose to treat my application like the release of a musical \"debut single\".",
+      "The concept relies on a strong analogy between music and code: rhythm, balance, and lack of dissonance. The main visual is a \"stylized album cover\" where standard CV information is graphically reinterpreted to catch recruiters' attention in a saturated LinkedIn feed."
+    ],
+    "strategyTitle": "Strategy & Creation",
+    "strategy": [
+      {"title":"Musical Storytelling","text":"Full drafting of the post using a musical lexical field (\"release\", \"mastering\", \"technical notes\"). The idea was to present my frontend skills (HTML, CSS, JS) as a rigorous and harmonious composition."},
+      {"title":"Visual Design (Affinity)","text":"Creation of a unique visual replacing the traditional CV. Information hierarchy formatted as a \"Tracklist\" for skills, album title for the targeted position, and credits for contact information."}
+    ],
+    "processCaption": "Creation process on Affinity",
+    "keyFeaturesTitle": "Concept Details",
+    "keyFeatures": [
+      "Skills Tracklist: Original presentation of hard skills (Web Dev).",
+      "\"Release\" Approach: Announcing the internship as an exclusive release from an emerging artist.",
+      "Design via Affinity: Mastery of graphic tools demonstrated through practice.",
+      "Double Impact: Simultaneous highlighting of technical skills (Affinity) and creative skills (the idea itself)."
+    ],
+    "ctaPost": "View LinkedIn Post",
+    "ctaDownload": "Download Visual"
+  },
+  "ClimbImprovePage": {
+    "backButton": "Back to projects",
+    "title": "ClimbImprove",
+    "subtitle": "Revolutionizing climbing through AI and IoT",
+    "heroImageAlt": "ClimbImprove Hero",
+    "techTitle": "Technologies",
+    "contextTitle": "Context",
+    "context": "University pair project (English Course)",
+    "yearTitle": "Year",
+    "year": "2025",
+    "aboutTitle": "About the project",
+    "aboutParagraphs": [
+      "Realized in pairs as part of an English course in the second year of the IT Degree. ClimbImprove is a conceptual project aiming to revolutionize climbing by combining artificial intelligence and connected objects.",
+      "To cope with tight deadlines while exploring AI technologies, we used Figma Make to simulate the service architecture. My role consisted of imagining the global concept and fully developing the showcase website, the centerpiece of our booth evaluation.",
+      "This site details a complete ecosystem: an application capable of biomechanical video analysis (\"Movement Analysis\") and personalized coaching (\"Smart Guidance\"), coupled with sustainable connected holds made of wood and polyester."
+    ],
+    "galleryTitle": "Interface Overview",
+    "galleryItems": [
+      {"caption":"Interface - Analysis & Home","alt":"ClimbImprove Home Site"},
+      {"caption":"Features Detail","alt":"ClimbImprove Features Site"},
+      {"caption":"Global Concept Presentation","alt":"ClimbImprove Global Site"}
+    ],
+    "ecosystemTitle": "Project Ecosystem",
+    "ecosystem": {
+      "mobile": [
+        "Movement Analysis: Real-time biomechanical video analysis",
+        "Smart Guidance: AI-based personalized coaching",
+        "Detailed tracking of climber progression",
+        "Precise performance data"
+      ],
+      "holds": [
+        "Sustainable materials: wood and polyester",
+        "Integrated pressure sensors",
+        "Route setting tools for setters",
+        "Load and technique analysis"
+      ]
+    },
+    "skillsTitle": "Skills Developed",
+    "skills": {
+      "design": [
+        "Innovation: Product design combining AI and IoT",
+        "UX/UI Design: Creation of optimized interfaces on Figma",
+        "Figma Make AI: Simulation of complex processes"
+      ],
+      "realization": [
+        "Web Development: Creation of the complete showcase website",
+        "Communication: Presentation and sale of the concept in English",
+        "Teamwork: Effective collaboration in pairs"
+      ]
+    },
+    "ctaCode": "View Code"
+  },
+  "Footer": {
+    "copyright": "© 2025 Nathan Courcelle. All rights reserved.",
+    "email": "nathan.5courcelle@gmail.com",
+    "role": "Frontend Developer",
+    "country": "France"
+  }
+}

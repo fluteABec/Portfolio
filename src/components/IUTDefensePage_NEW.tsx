@@ -52,22 +52,22 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
         {/* Project Info */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#05668D]">{t('IUTDefensePage.techTitle')}</h3>
+            <h3 className="text-lg mb-2 text-[#05668D]">{t('IUTDefensePage.info.techTitle')}</h3>
             <div className="flex flex-wrap gap-2">
-              {["HTML","CSS","PHP","MySQL"].map((tech, index) => (
+              {(t('IUTDefensePage.info.technologies') as string[]).map((tech, index) => (
                 <span key={index} className="px-3 py-1 rounded-full bg-white/5 text-sm">{tech}</span>
               ))}
             </div>
           </div>
 
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#679436]">{t('IUTDefensePage.roleTitle')}</h3>
-            <p className="text-[#A0A0A0]">{t('IUTDefensePage.role')}</p>
+            <h3 className="text-lg mb-2 text-[#679436]">{t('IUTDefensePage.info.roleTitle')}</h3>
+            <p className="text-[#A0A0A0]">{t('IUTDefensePage.info.role')}</p>
           </div>
 
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#05668D]">{t('IUTDefensePage.yearTitle')}</h3>
-            <p className="text-[#A0A0A0]">{t('IUTDefensePage.year')}</p>
+            <h3 className="text-lg mb-2 text-[#05668D]">{t('IUTDefensePage.info.yearTitle')}</h3>
+            <p className="text-[#A0A0A0]">{t('IUTDefensePage.info.year')}</p>
           </div>
         </div>
 
@@ -75,9 +75,9 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
         <div className="glass rounded-3xl p-8 mb-12">
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('IUTDefensePage.aboutTitle')}</h2>
           <div className="space-y-4 text-[#A0A0A0]">
-            {(t('IUTDefensePage.aboutParagraphs') as string[]).map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+            <p>{t('IUTDefensePage.description1')}</p>
+            <p>{t('IUTDefensePage.description2')}</p>
+            <p>{t('IUTDefensePage.description3')}</p>
           </div>
         </div>
 
@@ -85,26 +85,46 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
         <div className="mb-12">
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('IUTDefensePage.galleryTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {(t('IUTDefensePage.galleryItems') as Array<{caption: string, alt: string}>).map((item, index) => {
-              const images = [
-                '/images/Site-Soutenance-back1.avif',
-                '/images/Site-Soutenance-back2.avif',
-                '/images/Site-Soutenance-front.avif',
-                '/images/Site-Soutenance-SQL.avif'
-              ];
-              return (
-                <div key={index}>
-                  <p className="text-[#A0A0A0] text-sm font-medium mb-3">{item.caption}</p>
-                  <div className="glass rounded-3xl overflow-hidden h-64">
-                    <img
-                      src={images[index]}
-                      alt={item.alt}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              );
-            })}
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('IUTDefensePage.gallery.image1')}</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/images/Site-Soutenance-back1.avif"
+                  alt="Back-office gestion"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('IUTDefensePage.gallery.image2')}</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/images/Site-Soutenance-back2.avif"
+                  alt="Grilles d'évaluation"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('IUTDefensePage.gallery.image3')}</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/images/Site-Soutenance-front.avif"
+                  alt="Front-office étudiant"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('IUTDefensePage.gallery.image4')}</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/images/Site-Soutenance-SQL.avif"
+                  alt="Base de données SQL"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -113,9 +133,9 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('IUTDefensePage.featuresTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl mb-4 text-[#05668D]">Back-office (Professeurs & Administration)</h3>
+              <h3 className="text-xl mb-4 text-[#05668D]">{t('IUTDefensePage.features.admin.title')}</h3>
               <ul className="space-y-2 text-[#A0A0A0]">
-                {((t('IUTDefensePage.features') as any).admin as string[]).map((item, index) => (
+                {(t('IUTDefensePage.features.admin.items') as string[]).map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-[#05668D] mt-1">•</span>
                     <span>{item}</span>
@@ -124,9 +144,9 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl mb-4 text-[#679436]">Front-office (Étudiants)</h3>
+              <h3 className="text-xl mb-4 text-[#679436]">{t('IUTDefensePage.features.student.title')}</h3>
               <ul className="space-y-2 text-[#A0A0A0]">
-                {((t('IUTDefensePage.features') as any).student as string[]).map((item, index) => (
+                {(t('IUTDefensePage.features.student.items') as string[]).map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-[#679436] mt-1">•</span>
                     <span>{item}</span>
@@ -142,9 +162,9 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('IUTDefensePage.technicalTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-lg mb-3 text-[#05668D]">Back-end</h3>
+              <h3 className="text-lg mb-3 text-[#05668D]">{t('IUTDefensePage.technical.backend.title')}</h3>
               <ul className="space-y-2 text-[#A0A0A0]">
-                {((t('IUTDefensePage.technical') as any).backend as string[]).map((item, index) => (
+                {(t('IUTDefensePage.technical.backend.items') as string[]).map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-[#05668D] mt-1">•</span>
                     <span>{item}</span>
@@ -153,9 +173,9 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg mb-3 text-[#679436]">Front-end</h3>
+              <h3 className="text-lg mb-3 text-[#679436]">{t('IUTDefensePage.technical.frontend.title')}</h3>
               <ul className="space-y-2 text-[#A0A0A0]">
-                {((t('IUTDefensePage.technical') as any).frontend as string[]).map((item, index) => (
+                {(t('IUTDefensePage.technical.frontend.items') as string[]).map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-[#679436] mt-1">•</span>
                     <span>{item}</span>
@@ -175,7 +195,7 @@ export function IUTDefensePage({ onBack }: IUTDefensePageProps) {
             className="px-8 py-4 rounded-full glass-strong hover:bg-white/10 transition-all duration-200 flex items-center gap-2"
           >
             <Github className="w-5 h-5" />
-            {t('IUTDefensePage.ctaCode')}
+            {t('IUTDefensePage.viewCode')}
           </a>
         </div>
       </div>

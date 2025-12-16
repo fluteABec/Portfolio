@@ -52,22 +52,22 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
         {/* Project Info */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#05668D]">{t('ClimbImprovePage.techTitle')}</h3>
+            <h3 className="text-lg mb-2 text-[#05668D]">{t('ClimbImprovePage.info.techTitle')}</h3>
             <div className="flex flex-wrap gap-2">
-              {["Figma","FigmaMake","IA"].map((tech, index) => (
+              {(t('ClimbImprovePage.info.technologies') as string[]).map((tech, index) => (
                 <span key={index} className="px-3 py-1 rounded-full bg-white/5 text-sm">{tech}</span>
               ))}
             </div>
           </div>
 
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#679436]">{t('ClimbImprovePage.contextTitle')}</h3>
-            <p className="text-[#A0A0A0]">{t('ClimbImprovePage.context')}</p>
+            <h3 className="text-lg mb-2 text-[#679436]">{t('ClimbImprovePage.info.contextTitle')}</h3>
+            <p className="text-[#A0A0A0]">{t('ClimbImprovePage.info.context')}</p>
           </div>
 
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#05668D]">{t('ClimbImprovePage.yearTitle')}</h3>
-            <p className="text-[#A0A0A0]">{t('ClimbImprovePage.year')}</p>
+            <h3 className="text-lg mb-2 text-[#05668D]">{t('ClimbImprovePage.info.yearTitle')}</h3>
+            <p className="text-[#A0A0A0]">{t('ClimbImprovePage.info.year')}</p>
           </div>
         </div>
 
@@ -75,9 +75,9 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
         <div className="glass rounded-3xl p-8 mb-12">
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('ClimbImprovePage.aboutTitle')}</h2>
           <div className="space-y-4 text-[#A0A0A0]">
-            {(t('ClimbImprovePage.aboutParagraphs') as string[]).map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+            <p>{t('ClimbImprovePage.description1')}</p>
+            <p>{t('ClimbImprovePage.description2')}</p>
+            <p>{t('ClimbImprovePage.description3')}</p>
           </div>
         </div>
 
@@ -85,27 +85,32 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
         <div className="mb-12">
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('ClimbImprovePage.galleryTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {(t('ClimbImprovePage.galleryItems') as Array<{caption: string, alt: string}>).slice(0, 2).map((item, index) => {
-              const images = ['/images/Site-ClimbImprove1.avif', '/images/Site-ClimbImprove2.avif'];
-              return (
-                <div key={index}>
-                  <p className="text-[#A0A0A0] text-sm font-medium mb-3">{item.caption}</p>
-                  <div className="glass rounded-3xl overflow-hidden h-64">
-                    <img
-                      src={images[index]}
-                      alt={item.alt}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              );
-            })}
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('ClimbImprovePage.gallery.image1')}</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/images/Site-ClimbImprove1.avif"
+                  alt="Site ClimbImprove Accueil"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('ClimbImprovePage.gallery.image2')}</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/images/Site-ClimbImprove2.avif"
+                  alt="Site ClimbImprove Features"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
             <div className="md:col-span-2">
-              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{((t('ClimbImprovePage.galleryItems') as Array<{caption: string, alt: string}>)[2]).caption}</p>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('ClimbImprovePage.gallery.image3')}</p>
               <div className="glass rounded-3xl overflow-hidden h-80">
                 <img
                   src="/images/Site-ClimbImprove3.avif"
-                  alt={((t('ClimbImprovePage.galleryItems') as Array<{caption: string, alt: string}>)[2]).alt}
+                  alt="Site ClimbImprove Global"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -118,9 +123,9 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('ClimbImprovePage.ecosystemTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl mb-4 text-[#05668D]">Application mobile</h3>
+              <h3 className="text-xl mb-4 text-[#05668D]">{t('ClimbImprovePage.ecosystem.app.title')}</h3>
               <ul className="space-y-2 text-[#A0A0A0]">
-                {((t('ClimbImprovePage.ecosystem') as any).mobile as string[]).map((item, index) => (
+                {(t('ClimbImprovePage.ecosystem.app.items') as string[]).map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-[#05668D] mt-1">•</span>
                     <span dangerouslySetInnerHTML={{ __html: item }}></span>
@@ -129,9 +134,9 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl mb-4 text-[#679436]">Prises connectées</h3>
+              <h3 className="text-xl mb-4 text-[#679436]">{t('ClimbImprovePage.ecosystem.holds.title')}</h3>
               <ul className="space-y-2 text-[#A0A0A0]">
-                {((t('ClimbImprovePage.ecosystem') as any).holds as string[]).map((item, index) => (
+                {(t('ClimbImprovePage.ecosystem.holds.items') as string[]).map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-[#679436] mt-1">•</span>
                     <span>{item}</span>
@@ -147,9 +152,9 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('ClimbImprovePage.skillsTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-xl mb-4 text-[#679436]">Design & Innovation</h3>
+              <h3 className="text-xl mb-4 text-[#679436]">{t('ClimbImprovePage.skills.design.title')}</h3>
               <ul className="space-y-2 text-[#A0A0A0]">
-                {((t('ClimbImprovePage.skills') as any).design as string[]).map((item, index) => (
+                {(t('ClimbImprovePage.skills.design.items') as string[]).map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-[#679436] mt-1">•</span>
                     <span dangerouslySetInnerHTML={{ __html: item }}></span>
@@ -158,9 +163,9 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl mb-4 text-[#05668D]">Réalisation & Communication</h3>
+              <h3 className="text-xl mb-4 text-[#05668D]">{t('ClimbImprovePage.skills.soft.title')}</h3>
               <ul className="space-y-2 text-[#A0A0A0]">
-                {((t('ClimbImprovePage.skills') as any).realization as string[]).map((item, index) => (
+                {(t('ClimbImprovePage.skills.soft.items') as string[]).map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-[#05668D] mt-1">•</span>
                     <span dangerouslySetInnerHTML={{ __html: item }}></span>
@@ -180,7 +185,7 @@ export function ClimbImprovePage({ onBack }: ClimbImprovePageProps) {
             className="px-8 py-4 rounded-full glass-strong hover:bg-white/10 transition-all duration-200 flex items-center gap-2"
           >
             <Github className="w-5 h-5" />
-            {t('ClimbImprovePage.ctaCode')}
+            {t('ClimbImprovePage.viewCode')}
           </a>
         </div>
       </div>

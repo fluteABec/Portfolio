@@ -1,50 +1,56 @@
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
-
-const projects = [
-  {
-    id: 1,
-    slug: 'project-cabanes',
-    title: 'Cabanes et Yourtes de la Vallée de l\'Ance',
-    description: 'Un site réalisé pour moderniser leur site web et le rendre plus utilisable avec une meilleure facilité d\'accès à l\'information, un projet qui vas de création de wireframe à déployement.',
-    image: '/images/Site-CYVA-ytradi.avif',
-    tags: ['HTML', 'CSS', 'JS', 'Figma', 'Affinity', 'Responsive Design','Optimisation SEO'],
-    color: 'from-[#679436] to-[#7AAA4A]'
-  },
-  {
-    id: 2,
-    slug: 'project-iut',
-    title: 'Application de gestion de soutenance',
-    description: 'Projet universitaire en équipe, avec pour objectif de créer une application web permettant de faciliter la gestion de soutenance de l\'IUT.',
-    image: '/images/Site-Soutenance-hero.avif',
-    tags: ['HTML', 'CSS', 'PHP', 'MySQL'],
-    color: 'from-[#05668D] to-[#1A7A9E]'
-  },
-  {
-    id: 3,
-    slug: 'project-poster',
-    title: 'Poster LinkedIn',
-    description: 'Un poster réalisé dans le cadre de ma recherche de stage, pour promouvoir mon profil sur linkedIn, de manière originale en me servant du thème "Musique".',
-    image: '/images/PochetteAlbum-NathanCourcelle.avif',
-    tags: ['Affinity'],
-    color: 'from-[#679436] to-[#05668D]'  
-  }
-  ,
-  {
-    id: 4,
-    slug: 'project-climbimprove',
-    title: 'ClimbImprove',
-    description: "Projet conceptuel visant à révolutionner l'escalade grâce à l'IA et aux objets connectés. Site web vitrine présentant un écosystème complet d'analyse biomécanique et de coaching personnalisé.",
-    image: '/images/Site-ClimbImprove2.avif',
-    tags: ['FigmaMake', 'IA'],
-    color: 'from-[#7A4ACB] to-[#4A90E2]'
-  }
-];
+import { useTranslation } from '../contexts/LanguageContext';
 
 interface ProjectsPageProps {
   onNavigate: (page: string) => void;
 }
 
 export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
+  const { t } = useTranslation();
+  
+  const projectsData = t('ProjectsPage.projects') as any[];
+  const projects = [
+    {
+      id: 1,
+      slug: 'project-cabanes',
+      title: projectsData[0].title,
+      description: projectsData[0].description,
+      image: '/images/Site-CYVA-ytradi.avif',
+      tags: projectsData[0].tags,
+      cta: projectsData[0].cta,
+      color: 'from-[#679436] to-[#7AAA4A]'
+    },
+    {
+      id: 2,
+      slug: 'project-iut',
+      title: projectsData[1].title,
+      description: projectsData[1].description,
+      image: '/images/Site-Soutenance-hero.avif',
+      tags: projectsData[1].tags,
+      cta: projectsData[1].cta,
+      color: 'from-[#05668D] to-[#1A7A9E]'
+    },
+    {
+      id: 3,
+      slug: 'project-poster',
+      title: projectsData[2].title,
+      description: projectsData[2].description,
+      image: '/images/PochetteAlbum-NathanCourcelle.avif',
+      tags: projectsData[2].tags,
+      cta: projectsData[2].cta,
+      color: 'from-[#679436] to-[#05668D]'  
+    },
+    {
+      id: 4,
+      slug: 'project-climbimprove',
+      title: projectsData[3].title,
+      description: projectsData[3].description,
+      image: '/images/Site-ClimbImprove2.avif',
+      tags: projectsData[3].tags,
+      cta: projectsData[3].cta,
+      color: 'from-[#7A4ACB] to-[#4A90E2]'
+    }
+  ];
   return (
     <div className="min-h-screen pt-32 pb-24 px-6 relative overflow-hidden">
       {/* Background decorative shapes */}
@@ -60,10 +66,10 @@ export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
           <h1 className="text-6xl md:text-7xl mb-6 bg-gradient-to-r from-[#7AAA4A] to-[#1A7A9E] bg-clip-text text-transparent">
-            Mes Projets
+            {t('ProjectsPage.pageTitle')}
           </h1>
           <p className="text-xl text-[#A0A0A0] max-w-2xl mx-auto">
-            Une sélection de projets réalisé dans un cadre universitaire ou purement personnel
+            {t('ProjectsPage.subtitle')}
           </p>
         </div>
 
@@ -107,7 +113,7 @@ export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
                       onClick={() => onNavigate(projects[0].slug)}
                       className="px-6 py-3 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-200 flex items-center gap-2"
                     >
-                      <span>Voir le projet</span>
+                      <span>{projectsData[0].cta}</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
@@ -154,7 +160,7 @@ export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
                       onClick={() => onNavigate(project.slug)}
                       className="w-full px-4 py-3 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-200 flex items-center justify-center gap-2"
                     >
-                      <span>Voir le projet</span>
+                      <span>{project.cta}</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
@@ -167,13 +173,13 @@ export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
         {/* Call to Action */}
         <div className="text-center mt-20">
           <p className="text-lg text-[#A0A0A0] mb-6">
-            Si vous souhaitez en apprendre plus sur mes projets 
+            {t('ProjectsPage.learnMore')}
           </p>
           <button
             onClick={() => onNavigate('contact')}
             className="inline-block px-10 py-5 rounded-full glass-strong hover:bg-gradient-to-r hover:from-[#679436] hover:to-[#05668D] transition-all duration-200"
           >
-            Contactez Moi
+            {t('ProjectsPage.ctaContact')}
           </button>
         </div>
       </div>

@@ -44,7 +44,7 @@ export function UIDesignPosterPage({ onBack }: UIDesignPosterPageProps) {
         <div className="glass rounded-3xl overflow-hidden mb-12">
           <img
             src="/PochetteAlbum-NathanCourcelle.avif"
-            alt={t('UIDesignPosterPage.heroImageAlt')}
+            alt="Visuel du post LinkedIn style pochette d'album"
             className="w-full h-auto object-contain"
           />
         </div>
@@ -52,22 +52,22 @@ export function UIDesignPosterPage({ onBack }: UIDesignPosterPageProps) {
         {/* Project Info */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#679436]">{t('UIDesignPosterPage.toolsTitle')}</h3>
+            <h3 className="text-lg mb-2 text-[#679436]">{t('UIDesignPosterPage.info.toolsTitle')}</h3>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 rounded-full bg-white/5 text-sm">Affinity</span>
-              <span className="px-3 py-1 rounded-full bg-white/5 text-sm">Canva (Veille)</span>
-              <span className="px-3 py-1 rounded-full bg-white/5 text-sm">LinkedIn</span>
+              {(t('UIDesignPosterPage.info.tools') as string[]).map((tool, index) => (
+                <span key={index} className="px-3 py-1 rounded-full bg-white/5 text-sm">{tool}</span>
+              ))}
             </div>
           </div>
 
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#05668D]">{t('UIDesignPosterPage.contextTitle')}</h3>
-            <p className="text-[#A0A0A0]">{t('UIDesignPosterPage.context')}</p>
+            <h3 className="text-lg mb-2 text-[#05668D]">{t('UIDesignPosterPage.info.contextTitle')}</h3>
+            <p className="text-[#A0A0A0]">{t('UIDesignPosterPage.info.context')}</p>
           </div>
 
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#679436]">{t('UIDesignPosterPage.objectiveTitle')}</h3>
-            <p className="text-[#A0A0A0]">{t('UIDesignPosterPage.objective')}</p>
+            <h3 className="text-lg mb-2 text-[#679436]">{t('UIDesignPosterPage.info.objectiveTitle')}</h3>
+            <p className="text-[#A0A0A0]">{t('UIDesignPosterPage.info.objective')}</p>
           </div>
         </div>
 
@@ -75,9 +75,8 @@ export function UIDesignPosterPage({ onBack }: UIDesignPosterPageProps) {
         <div className="glass rounded-3xl p-8 mb-12">
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('UIDesignPosterPage.aboutTitle')}</h2>
           <div className="space-y-4 text-[#A0A0A0]">
-            {(t('UIDesignPosterPage.aboutParagraphs') as string[]).map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+            <p>{t('UIDesignPosterPage.description1')}</p>
+            <p>{t('UIDesignPosterPage.description2')}</p>
           </div>
         </div>
 
@@ -85,18 +84,24 @@ export function UIDesignPosterPage({ onBack }: UIDesignPosterPageProps) {
         <div className="glass rounded-3xl p-8 mb-12">
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('UIDesignPosterPage.strategyTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {(t('UIDesignPosterPage.strategy') as Array<{title: string, text: string}>).map((item, index) => (
-              <div key={index}>
-                <h3 className="text-xl mb-3 text-[#679436]">{item.title}</h3>
-                <p className="text-[#A0A0A0]">{item.text}</p>
-              </div>
-            ))}
+            <div>
+              <h3 className="text-xl mb-3 text-[#679436]">{t('UIDesignPosterPage.strategy.storytelling.title')}</h3>
+              <p className="text-[#A0A0A0]">
+                {t('UIDesignPosterPage.strategy.storytelling.description')}
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl mb-3 text-[#05668D]">{t('UIDesignPosterPage.strategy.visual.title')}</h3>
+              <p className="text-[#A0A0A0]">
+                {t('UIDesignPosterPage.strategy.visual.description')}
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Process Image */}
         <div className="mb-12">
-          <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('UIDesignPosterPage.processCaption')}</p>
+          <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('UIDesignPosterPage.processImage')}</p>
           <div className="glass rounded-3xl overflow-hidden">
             <img
               src="/images/Page-Pochette-Affinity.avif"
@@ -105,14 +110,15 @@ export function UIDesignPosterPage({ onBack }: UIDesignPosterPageProps) {
             />
           </div>
         </div>
+
         {/* Key Features */}
         <div className="glass rounded-3xl p-8 mb-12">
-          <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('UIDesignPosterPage.keyFeaturesTitle')}</h2>
+          <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('UIDesignPosterPage.conceptTitle')}</h2>
           <ul className="space-y-3 text-[#A0A0A0]">
-            {(t('UIDesignPosterPage.keyFeatures') as string[]).map((feature, index) => (
+            {(t('UIDesignPosterPage.conceptDetails') as string[]).map((detail, index) => (
               <li key={index} className="flex items-start gap-3">
-                <span className="text-[#679436] mt-1">•</span>
-                <span>{feature}</span>
+                <span className={index % 2 === 0 ? "text-[#679436] mt-1" : "text-[#05668D] mt-1"}>•</span>
+                <span dangerouslySetInnerHTML={{ __html: detail }}></span>
               </li>
             ))}
           </ul>
@@ -127,7 +133,7 @@ export function UIDesignPosterPage({ onBack }: UIDesignPosterPageProps) {
             className="px-8 py-4 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-200 flex items-center gap-2"
           >
             <ExternalLink className="w-5 h-5" />
-            {t('UIDesignPosterPage.ctaPost')}
+            {t('UIDesignPosterPage.viewPost')}
           </a>
           <a 
             href="/PochetteAlbum-NathanCourcelle.avif"
@@ -135,7 +141,7 @@ export function UIDesignPosterPage({ onBack }: UIDesignPosterPageProps) {
             className="px-8 py-4 rounded-full glass-strong hover:bg-white/10 transition-all duration-200 flex items-center gap-2"
           >
             <Download className="w-5 h-5" />
-            {t('UIDesignPosterPage.ctaDownload')}
+            {t('UIDesignPosterPage.downloadVisual')}
           </a>
         </div>
       </div>

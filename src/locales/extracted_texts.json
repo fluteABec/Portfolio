@@ -1,0 +1,363 @@
+{
+  "HomePage": {
+    "title": "Nathan Courcelle",
+    "hero": {
+      "subtitle": "Développeur Front-End UI/UX",
+      "description": "Ma vision du développement web ? C'est la technologie au service de l'usage. Ça peut paraître bête mais on a tendance à l'oublier c'est pour ça que j'en fais le point principal de mes créations : Je crée des solutions pertinentes qui donnent exactement le résultat que l'on attend d'elle.",
+      "cta": "Voir mes projets",
+      "imageAlt": "Nathan Courcelle"
+    },
+    "skills": {
+      "title": "Mon savoir-faire",
+      "subtitle": "Des solutions complètes, du design au déployement",
+      "webDev": {
+        "title": "Développement Web",
+        "description": "Conception de solutions web sur-mesure, de la simple page vitrine aux applications complexes",
+        "features": [
+          "Sites web responsive et accessibles",
+          "Numérique responsable",
+          "Optimisation technique (Vitesse de chargement & SEO)",
+          "Gestion dynamique des données"
+        ],
+        "tech": ["HTML","CSS","JS","Node.js","Express.js","Prisma (notions)","MySQL"]
+      },
+      "design": {
+        "title": "Design UI/UX",
+        "description": "Conception d'interfaces esthétiques et intuitives, prêtes à être intégrées",
+        "features": [
+          "Maquettes et prototypes interactifs",
+          "Conception centrée utilisateur",
+          "Design responsive",
+          "Identité visuelle et branding"
+        ],
+        "tech": ["Figma","Affinity"]
+      }
+    },
+    "ambition": {
+      "title": "Objectifs & Ambitions",
+      "text1": "Mon ambition est de mettre le numérique au service du savoir-faire local. Je souhaite permettre aux artisans et TPE d'avoir une vitrine digitale qui reflète la qualité réelle de leur travail.",
+      "text2": "C'est cette quête de légitimité qui guide mon apprentissage rigoureux aujourd'hui : acquérir une maîtrise technique solide pour offrir, demain, une image digitale à la hauteur de leur talent.",
+      "tags": ["Approche Hybride", "Rigueur", "Pertinence", "Veille Technologique"]
+    },
+    "contact": {
+      "title": "Me contacter",
+      "formTitle": "Envoyez un message",
+      "form": {
+        "nameLabel": "Nom complet *",
+        "namePlaceholder": "Votre nom",
+        "emailLabel": "Email *",
+        "emailPlaceholder": "votre.email@exemple.com",
+        "subjectLabel": "Sujet *",
+        "subjectPlaceholder": "Objet de votre message",
+        "messageLabel": "Message *",
+        "messagePlaceholder": "Votre message...",
+        "submit": "Envoyer le message",
+        "sending": "Envoi en cours...",
+        "success": "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.",
+        "error": "Une erreur est survenue. Veuillez réessayer ou me contacter directement par email."
+      },
+      "connectTitle": "Connect With Me",
+      "github": "Mon GitHub",
+      "linkedin": "Mon LinkedIn",
+      "cv": "Télécharger / Voir le CV",
+      "contactButton": "Contactez Moi"
+    }
+  },
+  "ProjectsPage": {
+    "pageTitle": "Mes Projets",
+    "subtitle": "Une sélection de projets réalisé dans un cadre universitaire ou purement personnel",
+    "projects": [
+      {
+        "title": "Cabanes et Yourtes de la Vallée de l'Ance",
+        "description": "Un site réalisé pour moderniser leur site web et le rendre plus utilisable avec une meilleure facilité d'accès à l'information, un projet qui vas de création de wireframe à déployement.",
+        "tags": ["HTML","CSS","JS","Figma","Affinity","Responsive Design","Optimisation SEO"],
+        "cta": "Voir le projet"
+      },
+      {
+        "title": "Application de gestion de soutenance",
+        "description": "Projet universitaire en équipe, avec pour objectif de créer une application web permettant de faciliter la gestion de soutenance de l'IUT.",
+        "tags": ["HTML","CSS","PHP","MySQL"],
+        "cta": "Voir le projet"
+      },
+      {
+        "title": "Poster LinkedIn",
+        "description": "Un poster réalisé dans le cadre de ma recherche de stage, pour promouvoir mon profil sur linkedIn, de manière originale en me servant du thème \"Musique\".",
+        "tags": ["Affinity"],
+        "cta": "Voir le projet"
+      },
+      {
+        "title": "ClimbImprove",
+        "description": "Projet conceptuel visant à révolutionner l'escalade grâce à l'IA et aux objets connectés. Site web vitrine présentant un écosystème complet d'analyse biomécanique et de coaching personnalisé.",
+        "tags": ["FigmaMake","IA"],
+        "cta": "Voir le projet"
+      }
+    ],
+    "ctaContact": "Contactez Moi",
+    "learnMore": "Si vous souhaitez en apprendre plus sur mes projets"
+  },
+  "CVPage": {
+    "name": "Nathan Courcelle",
+    "title": "Développeur Web",
+    "age": "18 ans",
+    "location": "Le Puy-en-Velay (43)",
+    "email": "nathan.5courcelle@gmail.com",
+    "description": "Actuellement Développeur Web en formation, j'ai choisi ce domaine pour pouvoir jouer avec ma créativité. J'apprécie particulièrement le frontend. Je suis satisfait quand mon wireframe se transforme en un site qui ne néglige pas l'UI ni l'UX.",
+    "downloadCV": "Télécharger le CV",
+    "educationTitle": "Formation",
+    "skillsTitle": "Compétences",
+    "languagesTitle": "Langues",
+    "experienceTitle": "Expériences",
+    "interestsTitle": "Centres d'intérêt",
+    "education": [
+      {
+        "degree": "Bachelor Universitaire de Technologie (ex DUT)",
+        "school": "IUT Clermont Auvergne, Site du Puy-en-Velay",
+        "location": "Le Puy-en-Velay (43)",
+        "period": "2024 - 2027",
+        "description": "Formation en développement web et informatique, avec spécialisation en frontend et UX/UI."
+      },
+      {
+        "degree": "Baccalauréat",
+        "school": "Lycée Charles et Adrien Dupuy",
+        "location": "Le Puy-en-Velay (43)",
+        "period": "2024",
+        "description": "Spécialités : Mathématiques, NSI (Numérique et Sciences Informatiques) et HGGSP."
+      }
+    ],
+    "skills": [
+      {
+        "category": "Développement Web & Logiciel",
+        "items": ["HTML - CSS - JavaScript","Node.js - Express.js","Python","C++","Analyse des besoins techniques","Conception d'architectures","Développement d'interfaces responsives","Tests unitaires et correctifs","Gestion de versions (Git)"]
+      },
+      {
+        "category": "Bases de Données & Outils",
+        "items": ["MySQL","phpMyAdmin","VS Code","VS Studio 2022","GitHub","Figma","Affinity","Gestion et intégrité des données","Optimisation des performances"]
+      },
+      {
+        "category": "UX/UI & Intégration",
+        "items": ["Interfaces centrées utilisateur","Collaboration avec designers","Amélioration expérience visuelle","Intégration éléments graphiques","Optimisation SEO","Standards web"]
+      },
+      {
+        "category": "Gestion de Projet",
+        "items": ["Veille concurrentielle","Analyse des besoins","Rédaction cahiers des charges","Documentation technique","Travail d'équipe","Communication"]
+      }
+    ],
+    "languages": [
+      {"name":"Anglais","level":"B2"},
+      {"name":"Italien","level":"A2"}
+    ],
+    "experiences": [
+      {
+        "role": "Employé Polyvalent Saisonnier",
+        "company": "Forteresse de Saint-Vidal",
+        "location": "Saint-Vidal (43)",
+        "period": "2025",
+        "description": "Poste polyvalent au sein d'un site historique touristique.",
+        "achievements": ["Accueil des visiteurs et service à la taverne","Entretien des chambres et jardins","Animation de visites guidées","Participation artistique en tant que comédien"]
+      },
+      {
+        "role": "Employé en Chambre d'Hôte",
+        "company": "Cabanes et Yourtes de la Vallée de l'Ance",
+        "location": "Sauvessanges (63)",
+        "period": "2022 - 2024",
+        "description": "Gestion complète de l'accueil et des services en hébergements écologiques.",
+        "achievements": ["Accueil des clients et gestion de la réception","Présentation des lieux et des équipements","Préparation des paniers repas et petits déjeuners","Entretien des cabanes, yourtes et espaces extérieurs"]
+      },
+      {
+        "role": "Accompagnement Chef d'Equipe (Stage)",
+        "company": "Clauger",
+        "location": "Cournon d'Auvergne (63)",
+        "period": "2021",
+        "description": "Stage de découverte dans le domaine du froid industriel.",
+        "achievements": ["Découverte du concept de froid industriel","Observation des contrôles et processus de fabrication","Initiation à l'automatisation","Expérience terrain en fromagerie"]
+      }
+    ],
+    "interests": [
+      {"title":"Grimpeur de Bloc","description":"Ce que j'aime le plus, c'est mettre toute ma technique dans le dévers !"},
+      {"title":"Guitariste Amateur","description":"Mon objectif ? Réussir à jouer Clocks de Coldplay en trio avec mes amis."},
+      {"title":"Cuisinier / Pâtissier","description":"Avec mes lasagnes, je suis imbattable !"}
+    ]
+  },
+  "CabanesYourtesPage": {
+    "backButton": "Retour aux projets",
+    "title": "Cabanes et Yourtes de la Vallée de l'Ance",
+    "subtitle": "Site web pour hébergements insolites en pleine nature",
+    "heroImageAlt": "Cabanes et Yourtes",
+    "techTitle": "Technologies",
+    "roleTitle": "Rôle",
+    "role": "Design & Développement Front-End",
+    "yearTitle": "Année",
+    "year": "2025",
+    "aboutTitle": "À propos du projet",
+    "aboutParagraphs": [
+      "Projet personnel à visée professionnelle consistant à concevoir et développer le site vitrine des hébergements touristiques Cabanes et Yourtes de la Vallée de l’Ance. Le site présente les logements, les activités locales et les disponibilités, avec une mise en avant de l’identité naturelle et artisanale du lieu.",
+      "Je réalise l’ensemble du processus : étude des besoins, zoning, wireframe, maquette sous Figma, intégration front-end (HTML, CSS, JavaScript) et mise en ligne. Le développement se fait en interaction continue avec les propriétaires pour ajuster le contenu et le design selon leurs retours. Le site est entièrement responsive et repose sur une palette naturelle de tons verts et bruns. Les images du site ont été prises sur place avec RC Creation"
+    ],
+    "galleryTitle": "Galerie",
+    "galleryItems": [
+      {"caption":"Conception du logo sur Affinity","alt":"Nature environnante"},
+      {"caption":"Conception du wireframe sur Figma","alt":"Vue d'ensemble"},
+      {"caption":"Page 'Les Colibris'","alt":"Vue d'ensemble"},
+      {"caption":"Page d'Accueil","alt":"Vue d'ensemble"},
+      {"caption":"Page 'Informations'","alt":"Vue d'ensemble"}
+    ],
+    "featuresTitle": "Fonctionnalités principales",
+    "features": [
+      "Système de navigation fluide",
+      "Intégration dynamique de données pour les disponibilités",
+      "Design responsive adapté à tous les appareils",
+      "Optimisation SEO pour le référencement naturel",
+      "Animations subtiles pour améliorer l'expérience utilisateur"
+    ],
+    "ctaSite": "Voir le site",
+    "ctaCode": "Voir le code"
+  },
+  "IUTDefensePage": {
+    "backButton": "Retour aux projets",
+    "title": "Gestion des Soutenances IUT",
+    "subtitle": "Application web de gestion des évaluations de stages pour l'IUT Informatique",
+    "heroImageAlt": "Gestion des Soutenances IUT",
+    "techTitle": "Technologies",
+    "roleTitle": "Rôle",
+    "role": "Développeur Front-end & Designer CSS",
+    "yearTitle": "Année",
+    "year": "2025",
+    "aboutTitle": "À propos du projet",
+    "aboutParagraphs": [
+      "Projet réalisé en équipe dans le cadre de la deuxième année d'IUT Informatique. L'objectif était de concevoir une application web centralisant la gestion complète des soutenances de stage et d'alternance : attribution des jurys, saisie et consultation des grilles d'évaluation, suivi des notes, administration des comptes (professeurs, étudiants), automatisation de certaines tâches internes (mails, remontées de données) ainsi qu'un travail sur la sécurisation des données.",
+      "J'ai développé la page d'accueil du professeur (vue personnalisée des soutenances à venir et passées, tri dynamique) et assuré l'intégration complète du design (CSS global conforme à la charte graphique de l'IUT).",
+      "Projet collaboratif de plus d'un mois avec la méthode agile, utilisant GitHub pour la gestion de version et VS Code pour le développement."
+    ],
+    "galleryTitle": "Aperçu de l'interface",
+    "galleryItems": [
+      {"caption":"Interface Back-office - Diffusion des résultat","alt":"Back-office gestion"},
+      {"caption":"Interface Front-office Professeur","alt":"Grilles d'évaluation"},
+      {"caption":"Interface Back-office - Grilles de notations","alt":"Front-office étudiant"},
+      {"caption":"Structure de la base de données MySQL","alt":"Base de données SQL"}
+    ],
+    "featuresTitle": "Fonctionnalités principales",
+    "features": {
+      "admin": [
+        "Tableau de bord avec statistiques et indicateurs",
+        "Gestion des soutenances (salles, créneaux, jurys)",
+        "Remontée et validation des notes",
+        "Export CSV et envoi automatique par email",
+        "Création et gestion des grilles d'évaluation",
+        "Administration des utilisateurs et droits d'accès"
+      ],
+      "student": [
+        "Consultation des informations personnelles de stage",
+        "Visualisation des grilles d'évaluation attribuées",
+        "Consultation détaillée des notes par critère",
+        "Accès aux commentaires du jury",
+        "Historique complet des évaluations",
+        "Suivi du statut d'évaluation en temps réel"
+      ]
+    },
+    "technicalTitle": "Aspects techniques",
+    "technical": {
+      "backend": [
+        "PHP avec architecture MVC",
+        "MySQL avec requêtes préparées (sécurité)",
+        "PHPMailer pour l'envoi d'emails automatisés",
+        "Système d'authentification sécurisé avec sessions"
+      ],
+      "frontend": [
+        "HTML5 & CSS3",
+        "PHP pour l'interactivité dynamique",
+        "DataTables pour les tableaux de données",
+        "Design conforme à la charte graphique IUT"
+      ]
+    },
+    "ctaCode": "Voir le code"
+  },
+  "UIDesignPosterPage": {
+    "backButton": "Retour aux projets",
+    "title": "CV pochette d'album",
+    "subtitle": "Campagne LinkedIn & Personal Branding - Concept Album",
+    "heroImageAlt": "Visuel du post LinkedIn style pochette d'album",
+    "toolsTitle": "Outils",
+    "contextTitle": "Contexte",
+    "context": "BUT Informatique (2ème année)",
+    "objectiveTitle": "Objectif",
+    "objective": "Recherche de stage Dev Web",
+    "aboutTitle": "À propos du projet",
+    "aboutParagraphs": [
+      "Dans le cadre du module \"Projet Personnel et Professionnel\", j'ai conçu une campagne de recherche de stage disruptive pour avril 2025. Plutôt que de simplement poster un CV PDF, j'ai choisi de traiter ma candidature comme la sortie d'un \"premier single\" musical.",
+      "Le concept repose sur une analogie forte entre la musique et le code : rythme, équilibre, et absence de dissonance. Le visuel principal est une \"pochette d'album stylisée\" où les informations classiques d'un CV sont réinterprétées graphiquement pour capter l'attention des recruteurs dans un flux LinkedIn saturé."
+    ],
+    "strategyTitle": "Stratégie & Création",
+    "strategy": [
+      {"title":"Storytelling Musical","text":"Rédaction intégrale du post avec un champ lexical musical (\"release\", \"mastering\", \"notes techniques\"). L'idée était de présenter mes compétences en frontend (HTML, CSS, JS) comme une composition rigoureuse et harmonieuse."},
+      {"title":"Conception Visuelle (Affinity)","text":"Création d'un visuel unique remplaçant le CV traditionnel. Hiérarchisation de l'information sous forme de \"Tracklist\" pour les compétences, titre de l'album pour le poste visé, et crédits pour les informations de contact."}
+    ],
+    "processCaption": "Processus de création sur Affinity",
+    "keyFeaturesTitle": "Détails du concept",
+    "keyFeatures": [
+      "Tracklist des compétences : Présentation originale des hard skills (Dev Web).",
+      "Approche \"Release\" : Annonce du stage comme une sortie exclusive d'un artiste émergent.",
+      "Design sous Affinity : Maîtrise des outils graphiques démontrée par la pratique.",
+      "Double impact : Mise en avant simultanée des compétences techniques (Affinity) et créatives (l'idée en elle même)."
+    ],
+    "ctaPost": "Voir le post LinkedIn",
+    "ctaDownload": "Télécharger le visuel"
+  },
+  "ClimbImprovePage": {
+    "backButton": "Retour aux projets",
+    "title": "ClimbImprove",
+    "subtitle": "Révolutionner l'escalade par l'IA et les objets connectés",
+    "heroImageAlt": "ClimbImprove Hero",
+    "techTitle": "Technologies",
+    "contextTitle": "Contexte",
+    "context": "Projet universitaire en binôme (Cours d'anglais)",
+    "yearTitle": "Année",
+    "year": "2025",
+    "aboutTitle": "À propos du projet",
+    "aboutParagraphs": [
+      "Réalisé en binôme dans le cadre d'un cours d'anglais en deuxième année de BUT Informatique. ClimbImprove est un projet conceptuel visant à révolutionner l'escalade grâce à l'alliance de l'intelligence artificielle et d'objets connectés.",
+      "Pour pallier des délais restreints tout en explorant les technologies d'IA, nous avons utilisé Figma Make pour simuler l'architecture de ce service. Mon rôle a consisté à imaginer le concept global et à développer intégralement le site web vitrine, pièce maîtresse de notre évaluation sur stand.",
+      "Ce site détaille un écosystème complet : une application capable d'analyse vidéo biomécanique (\"Movement Analysis\") et de coaching personnalisé (\"Smart Guidance\"), couplée à des prises connectées durables en bois et polyester."
+    ],
+    "galleryTitle": "Aperçu de l'interface",
+    "galleryItems": [
+      {"caption":"Interface - Analyse & Accueil","alt":"Site ClimbImprove Accueil"},
+      {"caption":"Détail des fonctionnalités","alt":"Site ClimbImprove Features"},
+      {"caption":"Présentation globale du concept","alt":"Site ClimbImprove Global"}
+    ],
+    "ecosystemTitle": "Écosystème du projet",
+    "ecosystem": {
+      "mobile": [
+        "Movement Analysis : Analyse vidéo biomécanique en temps réel",
+        "Smart Guidance : Coaching personnalisé basé sur l'IA",
+        "Suivi détaillé de la progression du grimpeur",
+        "Données précises sur les performances"
+      ],
+      "holds": [
+        "Matériaux durables : bois et polyester",
+        "Capteurs de pression intégrés",
+        "Outils de création de voies pour les ouvreurs",
+        "Analyse de la charge et de la technique"
+      ]
+    },
+    "skillsTitle": "Compétences développées",
+    "skills": {
+      "design": [
+        "Innovation : Conception produit alliant IA et IoT",
+        "Design UX/UI : Création d'interfaces optimisées sur Figma",
+        "IA Figma Make : Simulation de processus complexes"
+      ],
+      "realization": [
+        "Développement web : Création du site vitrine complet",
+        "Communication : Présentation et vente du concept en anglais",
+        "Travail d'équipe : Collaboration efficace en binôme"
+      ]
+    },
+    "ctaCode": "Voir le code"
+  },
+  "Footer": {
+    "copyright": "© 2025 Nathan Courcelle. All rights reserved.",
+    "email": "nathan.5courcelle@gmail.com",
+    "role": "Devoloppeur Front-End",
+    "country": "France"
+  }
+}

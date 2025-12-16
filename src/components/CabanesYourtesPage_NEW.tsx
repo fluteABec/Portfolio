@@ -51,22 +51,22 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
         {/* Project Info */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#679436]">{t('CabanesYourtesPage.techTitle')}</h3>
+            <h3 className="text-lg mb-2 text-[#679436]">{t('CabanesYourtesPage.info.techTitle')}</h3>
             <div className="flex flex-wrap gap-2">
-              {["HTML","CSS","JS","Figma","Affinity","Responsive Design","Optimisation SEO"].map((tech, index) => (
+              {(t('CabanesYourtesPage.info.technologies') as string[]).map((tech, index) => (
                 <span key={index} className="px-3 py-1 rounded-full bg-white/5 text-sm">{tech}</span>
               ))}
             </div>
           </div>
 
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#05668D]">{t('CabanesYourtesPage.roleTitle')}</h3>
-            <p className="text-[#A0A0A0]">{t('CabanesYourtesPage.role')}</p>
+            <h3 className="text-lg mb-2 text-[#05668D]">{t('CabanesYourtesPage.info.roleTitle')}</h3>
+            <p className="text-[#A0A0A0]">{t('CabanesYourtesPage.info.role')}</p>
           </div>
 
           <div className="glass rounded-3xl p-6">
-            <h3 className="text-lg mb-2 text-[#679436]">{t('CabanesYourtesPage.yearTitle')}</h3>
-            <p className="text-[#A0A0A0]">{t('CabanesYourtesPage.year')}</p>
+            <h3 className="text-lg mb-2 text-[#679436]">{t('CabanesYourtesPage.info.yearTitle')}</h3>
+            <p className="text-[#A0A0A0]">{t('CabanesYourtesPage.info.year')}</p>
           </div>
         </div>
 
@@ -74,9 +74,8 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
         <div className="glass rounded-3xl p-8 mb-12">
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('CabanesYourtesPage.aboutTitle')}</h2>
           <div className="space-y-4 text-[#A0A0A0]">
-            {(t('CabanesYourtesPage.aboutParagraphs') as string[]).map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+            <p>{t('CabanesYourtesPage.description1')}</p>
+            <p>{t('CabanesYourtesPage.description2')}</p>
           </div>
         </div>
 
@@ -84,27 +83,56 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
         <div className="mb-12">
           <h2 className="text-3xl mb-6 text-[#F2F2F2]">{t('CabanesYourtesPage.galleryTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {(t('CabanesYourtesPage.galleryItems') as Array<{caption: string, alt: string}>).map((item, index) => {
-              const images = [
-                '/images/Site-CYVA-Affinity.avif',
-                '/images/Site-CYVA-wireframe.avif',
-                '/images/Site-CYVA-colibris.avif',
-                '/images/Site-CYVA-hebergement.avif',
-                '/images/Site-CYVA-infos.avif'
-              ];
-              return (
-                <div key={index}>
-                  <p className="text-[#A0A0A0] text-sm font-medium mb-3">{item.caption}</p>
-                  <div className="glass rounded-3xl overflow-hidden h-64">
-                    <img
-                      src={images[index]}
-                      alt={item.alt}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              );
-            })}
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('CabanesYourtesPage.gallery.image1')}</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/images/Site-CYVA-Affinity.avif"
+                  alt="Nature environnante"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('CabanesYourtesPage.gallery.image2')}</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/images/Site-CYVA-wireframe.avif"
+                  alt="Vue d'ensemble"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('CabanesYourtesPage.gallery.image3')}</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/images/Site-CYVA-colibris.avif"
+                  alt="Vue d'ensemble"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('CabanesYourtesPage.gallery.image4')}</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/images/Site-CYVA-hebergement.avif"
+                  alt="Vue d'ensemble"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-[#A0A0A0] text-sm font-medium mb-3">{t('CabanesYourtesPage.gallery.image5')}</p>
+              <div className="glass rounded-3xl overflow-hidden h-64">
+                <img
+                  src="/images/Site-CYVA-infos.avif"
+                  alt="Vue d'ensemble"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -130,7 +158,7 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
             className="px-8 py-4 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-200 flex items-center gap-2"
           >
             <ExternalLink className="w-5 h-5" />
-            {t('CabanesYourtesPage.ctaSite')}
+            {t('CabanesYourtesPage.viewSite')}
           </a>
           <a 
             href="https://github.com/fluteABec/Cabanes-et-Yourtes"
@@ -139,7 +167,7 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
             className="px-8 py-4 rounded-full glass-strong hover:bg-white/10 transition-all duration-200 flex items-center gap-2"
           >
             <Github className="w-5 h-5" />
-            {t('CabanesYourtesPage.ctaCode')}
+            {t('CabanesYourtesPage.viewCode')}
           </a>
         </div>
       </div>

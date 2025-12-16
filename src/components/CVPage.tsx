@@ -1,146 +1,26 @@
 import { motion } from 'motion/react';
 import { Briefcase, GraduationCap, Download, Code, Database, Users, Globe, Mail, Phone, MapPin, Guitar, Mountain, ChefHat } from 'lucide-react';
-
-const experiences = [
-  {
-    role: 'Employé Polyvalent Saisonnier',
-    company: 'Forteresse de Saint-Vidal',
-    location: 'Saint-Vidal (43)',
-    period: '2025',
-    description: 'Poste polyvalent au sein d\'un site historique touristique.',
-    achievements: [
-      'Accueil des visiteurs et service à la taverne',
-      'Entretien des chambres et jardins',
-      'Animation de visites guidées',
-      'Participation artistique en tant que comédien'
-    ]
-  },
-  {
-    role: 'Employé en Chambre d\'Hôte',
-    company: 'Cabanes et Yourtes de la Vallée de l\'Ance',
-    location: 'Sauvessanges (63)',
-    period: '2022 - 2024',
-    description: 'Gestion complète de l\'accueil et des services en hébergements écologiques.',
-    achievements: [
-      'Accueil des clients et gestion de la réception',
-      'Présentation des lieux et des équipements',
-      'Préparation des paniers repas et petits déjeuners',
-      'Entretien des cabanes, yourtes et espaces extérieurs'
-    ]
-  },
-  {
-    role: 'Accompagnement Chef d\'Équipe (Stage)',
-    company: 'Clauger',
-    location: 'Cournon d\'Auvergne (63)',
-    period: '2021',
-    description: 'Stage de découverte dans le domaine du froid industriel.',
-    achievements: [
-      'Découverte du concept de froid industriel',
-      'Observation des contrôles et processus de fabrication',
-      'Initiation à l\'automatisation',
-      'Expérience terrain en fromagerie'
-    ]
-  }
-];
-
-const education = [
-  {
-    degree: 'Bachelor Universitaire de Technologie (ex DUT)',
-    school: 'IUT Clermont Auvergne, Site du Puy-en-Velay',
-    location: 'Le Puy-en-Velay (43)',
-    period: '2024 - 2027',
-    description: 'Formation en développement web et informatique, avec spécialisation en frontend et UX/UI.'
-  },
-  {
-    degree: 'Baccalauréat',
-    school: 'Lycée Charles et Adrien Dupuy',
-    location: 'Le Puy-en-Velay (43)',
-    period: '2024',
-    description: 'Spécialités : Mathématiques, NSI (Numérique et Sciences Informatiques) et HGGSP.'
-  }
-];
-
-const skills = [
-  {
-    category: 'Développement Web & Logiciel',
-    icon: <Code className="w-6 h-6" />,
-    items: [
-  'HTML - CSS - JavaScript',
-  'Node.js - Express.js',
-      'Python',
-      'C++',
-      'Analyse des besoins techniques',
-      'Conception d\'architectures',
-      'Développement d\'interfaces responsives',
-      'Tests unitaires et correctifs',
-      'Gestion de versions (Git)'
-    ]
-  },
-  {
-    category: 'Bases de Données & Outils',
-    icon: <Database className="w-6 h-6" />,
-    items: [
-      'MySQL',
-      'phpMyAdmin',
-      'VS Code',
-      'VS Studio 2022',
-  'GitHub',
-  'Figma',
-  'Affinity',
-      'Gestion et intégrité des données',
-      'Optimisation des performances'
-    ]
-  },
-  {
-    category: 'UX/UI & Intégration',
-    icon: <Globe className="w-6 h-6" />,
-    items: [
-      'Interfaces centrées utilisateur',
-      'Collaboration avec designers',
-      'Amélioration expérience visuelle',
-      'Intégration éléments graphiques',
-      'Optimisation SEO',
-      'Standards web'
-    ]
-  },
-  {
-    category: 'Gestion de Projet',
-    icon: <Users className="w-6 h-6" />,
-    items: [
-      'Veille concurrentielle',
-      'Analyse des besoins',
-      'Rédaction cahiers des charges',
-      'Documentation technique',
-      'Travail d\'équipe',
-      'Communication'
-    ]
-  }
-];
-
-const languages = [
-  { name: 'Anglais', level: 'B2', color: '#05668D' },
-  { name: 'Italien', level: 'A2', color: '#679436' }
-];
-
-const interests = [
-  {
-    title: 'Grimpeur de Bloc',
-    description: 'Ce que j\'aime le plus, c\'est mettre toute ma technique dans le dévers !',
-    icon: <Mountain className="w-8 h-8" />
-  },
-  {
-    title: 'Guitariste Amateur',
-    description: 'Mon objectif ? Réussir à jouer Clocks de Coldplay en trio avec mes amis.',
-    icon: <Guitar className="w-8 h-8" />
-  },
-  {
-    title: 'Cuisinier / Pâtissier',
-    description: 'Avec mes lasagnes, je suis imbattable !',
-    icon: <ChefHat className="w-8 h-8" />
-  }
-];
+import { useTranslation } from '../contexts/LanguageContext';
 
 export function CVPage() {
+  const { t } = useTranslation();
+  
+  const experiences = t('CVPage.experiences') as any[];
+  const education = t('CVPage.education') as any[];
+  const skills = (t('CVPage.skills') as any[]).map((skill: any, index: number) => ({
+    ...skill,
+    icon: index === 0 ? <Code className="w-6 h-6" /> :
+          index === 1 ? <Database className="w-6 h-6" /> :
+          index === 2 ? <Globe className="w-6 h-6" /> :
+          <Users className="w-6 h-6" />
+  }));
+  const languages = t('CVPage.languages') as any[];
+  const interests = (t('CVPage.interests') as any[]).map((interest: any, index: number) => ({
+    ...interest,
+    icon: index === 0 ? <Mountain className="w-8 h-8" /> :
+          index === 1 ? <Guitar className="w-8 h-8" /> :
+          <ChefHat className="w-8 h-8" />
+  }));
   const handleDownloadCV = () => {
     // Option 1: Si vous avez un PDF dans le dossier public/
     const link = document.createElement('a');
@@ -162,22 +42,22 @@ export function CVPage() {
           className="text-center mb-16"
         >
           <h1 className="text-6xl md:text-7xl mb-4 bg-gradient-to-r from-[#7AAA4A] to-[#1A7A9E] bg-clip-text text-transparent">
-            Nathan Courcelle
+            {t('CVPage.name')}
           </h1>
-          <p className="text-2xl text-[#F2F2F2] mb-3">Développeur Web</p>
-          <p className="text-lg text-[#A0A0A0] mb-6">18 ans</p>
+          <p className="text-2xl text-[#F2F2F2] mb-3">{t('CVPage.title')}</p>
+          <p className="text-lg text-[#A0A0A0] mb-6">{t('CVPage.age')}</p>
           
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-6 mb-8 text-[#A0A0A0]">
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5 text-[#679436]" />
-              <span>Le Puy-en-Velay (43)</span>
+              <span>{t('CVPage.location')}</span>
             </div>
             
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-[#679436]" />
               <a href="mailto:nathan.5courcelle@gmail.com" className="hover:text-[#F2F2F2] transition-colors">
-                nathan.5courcelle@gmail.com
+                {t('CVPage.email')}
               </a>
             </div>
           </div>
@@ -185,9 +65,7 @@ export function CVPage() {
           {/* Description */}
           <div className="glass rounded-3xl p-8 mb-8 max-w-3xl mx-auto">
             <p className="text-[#A0A0A0] leading-relaxed">
-              Actuellement Développeur Web en formation, j'ai choisi ce domaine pour pouvoir jouer avec ma créativité. 
-              J'apprécie particulièrement le <span className="text-[#05668D] font-semibold">frontend</span>. 
-              Je suis satisfait quand mon wireframe se transforme en un site qui ne néglige pas l'UI ni l'UX.
+              {t('CVPage.description')}
             </p>
           </div>
 
@@ -196,7 +74,7 @@ export function CVPage() {
             className="px-8 py-4 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
           >
             <Download className="w-5 h-5" />
-            Télécharger le CV
+            {t('CVPage.downloadCV')}
           </button>
         </motion.div>
 
@@ -209,7 +87,7 @@ export function CVPage() {
         >
           <div className="flex items-center gap-4 mb-8">
             <GraduationCap className="w-8 h-8 text-[#05668D]" />
-            <h2 className="text-4xl text-[#F2F2F2]">Formation</h2>
+            <h2 className="text-4xl text-[#F2F2F2]">{t('CVPage.educationTitle')}</h2>
           </div>
 
           <div className="space-y-6">
@@ -245,7 +123,7 @@ export function CVPage() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-16"
         >
-          <h2 className="text-4xl text-[#F2F2F2] mb-8">Compétences</h2>
+          <h2 className="text-4xl text-[#F2F2F2] mb-8">{t('CVPage.skillsTitle')}</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             {skills.map((skillGroup, index) => (
@@ -281,7 +159,7 @@ export function CVPage() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-4xl text-[#F2F2F2] mb-8">Langues</h2>
+          <h2 className="text-4xl text-[#F2F2F2] mb-8">{t('CVPage.languagesTitle')}</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
             {languages.map((lang, index) => (
@@ -315,7 +193,7 @@ export function CVPage() {
         >
           <div className="flex items-center gap-4 mb-8">
             <Briefcase className="w-8 h-8 text-[#679436]" />
-            <h2 className="text-4xl text-[#F2F2F2]">Expériences</h2>
+            <h2 className="text-4xl text-[#F2F2F2]">{t('CVPage.experienceTitle')}</h2>
           </div>
 
           <div className="space-y-6">
@@ -359,7 +237,7 @@ export function CVPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
         >
-          <h2 className="text-4xl text-[#F2F2F2] mb-8">Centres d'intérêt</h2>
+          <h2 className="text-4xl text-[#F2F2F2] mb-8">{t('CVPage.interestsTitle')}</h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             {interests.map((interest, index) => (

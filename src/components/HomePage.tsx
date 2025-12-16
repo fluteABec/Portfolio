@@ -2,12 +2,14 @@ import { motion } from 'motion/react';
 import { Code2, Palette, Zap, Github, Linkedin, Mail, FileDown, Target, Rocket, Monitor, Layers, Send, User, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from '../contexts/LanguageContext';
 
 interface HomePageProps {
   onNavigate: (page: string) => void;
 }
 
 export function HomePage({ onNavigate }: HomePageProps) {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -74,7 +76,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           {/* Title - Full Width */}
           <div className="text-center mb-16">
             <h1 className="text-7xl md:text-8xl lg:text-9xl bg-gradient-to-r from-[#7AAA4A] to-[#1A7A9E] bg-clip-text text-transparent">
-              Nathan Courcelle
+              {t('HomePage.title')}
             </h1>
           </div>
 
@@ -83,18 +85,18 @@ export function HomePage({ onNavigate }: HomePageProps) {
             {/* Left Column - Text Content */}
             <div className="space-y-8">
               <h2 className="text-3xl md:text-4xl text-[#F2F2F2]">
-                Développeur Front-End UI/UX
+                {t('HomePage.hero.subtitle')}
               </h2>
 
               <p className="text-lg md:text-xl text-[#A0A0A0] leading-relaxed">
-                Ma vision du développement web ? C'est la technologie au service de l'usage. Ça peut paraître bête mais on a tendance à l'oublier c'est pour ça que j'en fais le point principal de mes créations : Je crée des solutions pertinentes qui donnent exactement le résultat que l'on attend d'elle.
+                {t('HomePage.hero.description')}
               </p>
 
               <button
                 onClick={() => onNavigate('projects')}
                 className="px-10 py-5 rounded-full text-lg glass-strong hover:bg-gradient-to-r hover:from-[#679436] hover:to-[#05668D] transition-all duration-200"
               >
-                Voir mes projets
+                {t('HomePage.hero.cta')}
               </button>
             </div>
 
@@ -129,10 +131,10 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-5xl text-center mb-6 text-[#F2F2F2]">
-            Mon savoir-faire
+            {t('HomePage.skills.title')}
           </h2>
           <p className="text-center text-xl text-[#A0A0A0] mb-16 max-w-2xl mx-auto">
-            Des solutions complètes, du design au déployement
+            {t('HomePage.skills.subtitle')}
           </p>
 
           {/* Two Column Layout */}
@@ -143,40 +145,26 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <div className="p-4 rounded-2xl bg-gradient-to-br from-[#679436]/20 to-[#679436]/10 group-hover:from-[#679436]/30 group-hover:to-[#679436]/20 transition-all duration-200">
                   <Monitor className="w-10 h-10 text-[#7AAA4A]" />
                 </div>
-                <h3 className="text-3xl text-[#F2F2F2]">Développement Web</h3>
+                <h3 className="text-3xl text-[#F2F2F2]">{t('HomePage.skills.webDev.title')}</h3>
               </div>
 
               <p className="text-lg text-[#A0A0A0] mb-6 leading-relaxed">
-                Conception de solutions web sur-mesure, de la simple page vitrine aux applications complexes
+                {t('HomePage.skills.webDev.description')}
               </p>
 
               <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3 text-[#A0A0A0]">
-                  <span className="text-[#7AAA4A] mt-1">✓</span>
-                  <span>Sites web responsive et accessibles</span>
-                </li>
-                <li className="flex items-start gap-3 text-[#A0A0A0]">
-                  <span className="text-[#7AAA4A] mt-1">✓</span>
-                  <span>Numérique responsable</span>
-                </li>
-                <li className="flex items-start gap-3 text-[#A0A0A0]">
-                  <span className="text-[#7AAA4A] mt-1">✓</span>
-                  <span>Optimisation technique (Vitesse de chargement & SEO)</span>
-                </li>
-                <li className="flex items-start gap-3 text-[#A0A0A0]">
-                  <span className="text-[#7AAA4A] mt-1">✓</span>
-                  <span>Gestion dynamique des données</span>               
-                </li>
+                {(t('HomePage.skills.webDev.features') as string[]).map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3 text-[#A0A0A0]">
+                    <span className="text-[#7AAA4A] mt-1">✓</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
               </ul>
 
               <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">HTML</span>
-                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">CSS</span>
-                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">JS</span>
-                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">Node.js</span>
-                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">Express.js</span>
-                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">Prisma (notions)</span>
-                <span className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">MySQL</span>
+                {(t('HomePage.skills.webDev.tech') as string[]).map((tech, index) => (
+                  <span key={index} className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">{tech}</span>
+                ))}
               </div>
             </div>
 
@@ -186,35 +174,26 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <div className="p-4 rounded-2xl bg-gradient-to-br from-[#05668D]/20 to-[#05668D]/10 group-hover:from-[#05668D]/30 group-hover:to-[#05668D]/20 transition-all duration-200">
                   <Layers className="w-10 h-10 text-[#1A7A9E]" />
                 </div>
-                <h3 className="text-3xl text-[#F2F2F2]">Design UI/UX</h3>
+                <h3 className="text-3xl text-[#F2F2F2]">{t('HomePage.skills.design.title')}</h3>
               </div>
 
               <p className="text-lg text-[#A0A0A0] mb-6 leading-relaxed">
-                Conception d'interfaces esthétiques et intuitives, prêtes à être intégrées
+                {t('HomePage.skills.design.description')}
               </p>
 
               <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3 text-[#A0A0A0]">
-                  <span className="text-[#1A7A9E] mt-1">✓</span>
-                  <span>Maquettes et prototypes interactifs</span>
-                </li>
-                <li className="flex items-start gap-3 text-[#A0A0A0]">
-                  <span className="text-[#1A7A9E] mt-1">✓</span>
-                  <span>Conception centrée utilisateur</span>
-                </li>
-                <li className="flex items-start gap-3 text-[#A0A0A0]">
-                  <span className="text-[#1A7A9E] mt-1">✓</span>
-                  <span>Design responsive</span>
-                </li>
-                <li className="flex items-start gap-3 text-[#A0A0A0]">
-                  <span className="text-[#1A7A9E] mt-1">✓</span>
-                  <span>Identité visuelle et branding</span>
-                </li>
+                {(t('HomePage.skills.design.features') as string[]).map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3 text-[#A0A0A0]">
+                    <span className="text-[#1A7A9E] mt-1">✓</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
               </ul>
 
               <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-2 rounded-full bg-[#05668D]/10 text-[#1A7A9E] text-sm">Figma</span>
-                <span className="px-4 py-2 rounded-full bg-[#05668D]/10 text-[#1A7A9E] text-sm">Affinity</span>
+                {(t('HomePage.skills.design.tech') as string[]).map((tech, index) => (
+                  <span key={index} className="px-4 py-2 rounded-full bg-[#05668D]/10 text-[#1A7A9E] text-sm">{tech}</span>
+                ))}
               </div>
             </div>
           </div>
@@ -230,33 +209,26 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-6">
                 <Target className="w-12 h-12 text-[#679436]" />
-                <h2 className="text-5xl text-[#F2F2F2]">Objectifs & Ambitions</h2>
+                <h2 className="text-5xl text-[#F2F2F2]">{t('HomePage.ambition.title')}</h2>
               </div>
 
               <p className="text-xl text-[#A0A0A0] mb-6 leading-relaxed">
-                Mon ambition est de mettre le numérique au service du savoir-faire local. Je souhaite permettre aux artisans et TPE d'avoir une vitrine digitale qui reflète la qualité réelle de leur travail.
+                {t('HomePage.ambition.text1')}
               </p>
 
               <div className="flex items-start gap-4 mb-6">
                 <Rocket className="w-8 h-8 text-[#05668D] mt-1 flex-shrink-0" />
                 <p className="text-lg text-[#A0A0A0] leading-relaxed">
-                  C'est cette quête de légitimité qui guide mon apprentissage rigoureux aujourd'hui : acquérir une maîtrise technique solide pour offrir, demain, une image digitale à la hauteur de leur talent.
+                  {t('HomePage.ambition.text2')}
                   </p>
               </div>
 
               <div className="flex flex-wrap gap-4 mt-8">
-                <div className="glass rounded-full px-6 py-3">
-                  <span className="text-[#7AAA4A]">Approche Hybride</span>
-                </div>
-                <div className="glass rounded-full px-6 py-3">
-                  <span className="text-[#1A7A9E]">Rigueur</span>
-                </div>
-                <div className="glass rounded-full px-6 py-3">
-                  <span className="text-[#7AAA4A]">Pertinence</span>
-                </div>
-                <div className="glass rounded-full px-6 py-3">
-                  <span className="text-[#1A7A9E]">Veille Technologique</span>
-                </div>
+                {(t('HomePage.ambition.tags') as string[]).map((tag, index) => (
+                  <div key={index} className="glass rounded-full px-6 py-3">
+                    <span className={index % 2 === 0 ? "text-[#7AAA4A]" : "text-[#1A7A9E]"}>{tag}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -267,7 +239,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section id="contact" className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl text-center mb-16 text-[#F2F2F2]">
-            Me contacter
+            {t('HomePage.contact.title')}
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -275,14 +247,14 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <div className="glass rounded-3xl p-8">
               <h3 className="text-2xl font-bold text-[#F2F2F2] mb-6 flex items-center gap-2">
                 <MessageSquare className="w-6 h-6 text-[#679436]" />
-                Envoyez un message
+                {t('HomePage.contact.formTitle')}
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Input */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-[#A0A0A0] mb-2">
-                    Nom complet *
+                    {t('HomePage.contact.form.nameLabel')}
                   </label>
                   <input
                     type="text"
@@ -292,14 +264,14 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-[#F2F2F2] placeholder-[#A0A0A0] focus:outline-none focus:border-[#679436] transition-colors"
-                    placeholder="Votre nom"
+                    placeholder={t('HomePage.contact.form.namePlaceholder')}
                   />
                 </div>
 
                 {/* Email Input */}
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-[#A0A0A0] mb-2">
-                    Email *
+                    {t('HomePage.contact.form.emailLabel')}
                   </label>
                   <input
                     type="email"
@@ -309,14 +281,14 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-[#F2F2F2] placeholder-[#A0A0A0] focus:outline-none focus:border-[#679436] transition-colors"
-                    placeholder="votre.email@exemple.com"
+                    placeholder={t('HomePage.contact.form.emailPlaceholder')}
                   />
                 </div>
 
                 {/* Subject Input */}
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-[#A0A0A0] mb-2">
-                    Sujet *
+                    {t('HomePage.contact.form.subjectLabel')}
                   </label>
                   <input
                     type="text"
@@ -326,14 +298,14 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     value={formData.subject}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-[#F2F2F2] placeholder-[#A0A0A0] focus:outline-none focus:border-[#679436] transition-colors"
-                    placeholder="Objet de votre message"
+                    placeholder={t('HomePage.contact.form.subjectPlaceholder')}
                   />
                 </div>
 
                 {/* Message Textarea */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-[#A0A0A0] mb-2">
-                    Message *
+                    {t('HomePage.contact.form.messageLabel')}
                   </label>
                   <textarea
                     id="message"
@@ -343,7 +315,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     onChange={handleChange}
                     rows={5}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-[#F2F2F2] placeholder-[#A0A0A0] focus:outline-none focus:border-[#679436] transition-colors resize-none"
-                    placeholder="Votre message..."
+                    placeholder={t('HomePage.contact.form.messagePlaceholder')}
                   />
                 </div>
 
@@ -351,14 +323,14 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 {status === 'success' && (
                   <div className="flex items-center gap-2 p-4 bg-[#679436]/20 border border-[#679436]/30 rounded-xl text-[#679436]">
                     <CheckCircle className="w-5 h-5" />
-                    <p className="text-sm">Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.</p>
+                    <p className="text-sm">{t('HomePage.contact.form.successMessage')}</p>
                   </div>
                 )}
 
                 {status === 'error' && (
                   <div className="flex items-start gap-2 p-4 bg-red-500/20 border border-red-500/30 rounded-xl text-red-400">
                     <AlertCircle className="w-5 h-5 mt-0.5" />
-                    <p className="text-sm">{errorMessage}</p>
+                    <p className="text-sm">{t('HomePage.contact.form.errorMessage')}</p>
                   </div>
                 )}
 
@@ -371,12 +343,12 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   {status === 'sending' ? (
                     <>
                       <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Envoi en cours...
+                      {t('HomePage.contact.form.sendingButton')}
                     </>
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      Envoyer le message
+                      {t('HomePage.contact.form.submit')}
                     </>
                   )}
                 </button>
@@ -386,7 +358,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             {/* Contact Info & CV Download */}
             <div className="space-y-6">
               <div className="glass rounded-3xl p-8">
-                <h3 className="text-2xl mb-6 text-[#F2F2F2]">Connect With Me</h3>
+                <h3 className="text-2xl mb-6 text-[#F2F2F2]">{t('HomePage.contact.connectTitle')}</h3>
                 
                 <div className="space-y-4">
                   <a
@@ -404,7 +376,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     className="flex items-center gap-4 p-4 glass-strong rounded-full hover:bg-gradient-to-r hover:from-[#679436]/20 hover:to-[#05668D]/20 transition-all duration-200"
                   >
                     <Github className="w-6 h-6 text-[#05668D]" />
-                    <span className="text-[#F2F2F2]">Mon GitHub</span>
+                    <span className="text-[#F2F2F2]">{t('HomePage.contact.github')}</span>
                   </a>
 
                   <a
@@ -414,7 +386,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     className="flex items-center gap-4 p-4 glass-strong rounded-full hover:bg-gradient-to-r hover:from-[#679436]/20 hover:to-[#05668D]/20 transition-all duration-200"
                   >
                     <Linkedin className="w-6 h-6 text-[#679436]" />
-                    <span className="text-[#F2F2F2]">Mon LinkedIn</span>
+                    <span className="text-[#F2F2F2]">{t('HomePage.contact.linkedin')}</span>
                   </a>
                 </div>
               </div>
@@ -424,7 +396,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 className="w-full px-8 py-6 rounded-full glass-strong hover:bg-gradient-to-r hover:from-[#679436] hover:to-[#05668D] transition-all duration-200 flex items-center justify-center gap-3"
               >
                 <FileDown className="w-6 h-6" />
-                <span>Download CV / View Resume</span>
+                <span>{t('HomePage.contact.cv')}</span>
               </button>
             </div>
           </div>
