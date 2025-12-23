@@ -180,6 +180,21 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+/* Layout helpers for sidebar spacing */
+:root {
+  --sidebar-width: 5rem; /* matches w-20 (80px) */
+}
+
+.content-with-sidebar {
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .content-with-sidebar {
+    padding-left: var(--sidebar-width);
+  }
+}
+
 /* Gradient backgrounds */
 .gradient-primary {
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-blue) 100%);
