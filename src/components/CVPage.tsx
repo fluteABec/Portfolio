@@ -21,11 +21,10 @@ export function CVPage() {
           index === 1 ? <Guitar className="w-8 h-8" /> :
           <ChefHat className="w-8 h-8" />
   }));
-  const handleDownloadCV = () => {
-    // Option 1: Si vous avez un PDF dans le dossier public/
+  const handleDownloadCV = (language: 'fr' | 'en') => {
     const link = document.createElement('a');
-    link.href = '/CV-Nathan-Courcelle.pdf'; // Placez votre CV.pdf dans le dossier public/
-    link.download = 'CV-Nathan-Courcelle.pdf';
+    link.href = language === 'fr' ? '/CV-DevWeb-FR.pdf' : '/CV-DevWeb-EN.pdf';
+    link.download = language === 'fr' ? 'CV-Nathan-Courcelle-FR.pdf' : 'CV-Nathan-Courcelle-EN.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -69,13 +68,23 @@ export function CVPage() {
             </p>
           </div>
 
-          <button
-            onClick={handleDownloadCV}
-            className="px-8 py-4 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
-          >
-            <Download className="w-5 h-5" />
-            {t('CVPage.downloadCV')}
-          </button>
+          <div className="flex flex-wrap gap-4 justify-center items-center">
+            <button
+              onClick={() => handleDownloadCV('fr')}
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+            >
+              <Download className="w-5 h-5" />
+              {t('CVPage.downloadCV')} (FR)
+            </button>
+            
+            <button
+              onClick={() => handleDownloadCV('en')}
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-[#05668D] to-[#679436] hover:from-[#1A7A9E] hover:to-[#7AAA4A] transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+            >
+              <Download className="w-5 h-5" />
+              {t('CVPage.downloadCV')} (EN)
+            </button>
+          </div>
         </motion.div>
 
         {/* Education Section */}
