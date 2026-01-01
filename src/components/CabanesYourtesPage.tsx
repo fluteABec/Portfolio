@@ -124,7 +124,7 @@ export function CabanesYourtesPage({ onBack }: CabanesYourtesPageProps) {
         {/* Action Buttons */}
         <div className="flex gap-4 justify-center">
           <a 
-            href="https://fluteabec.github.io/Cabanes-et-Yourtes/index.html"
+            href="https://cabanes-et-yourtes.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 rounded-full bg-gradient-to-r from-[#679436] to-[#05668D] hover:from-[#7AAA4A] hover:to-[#1A7A9E] transition-all duration-200 flex items-center gap-2"
