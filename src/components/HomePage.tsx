@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Code2, Palette, Zap, Github, Linkedin, Mail, FileDown, Target, Rocket, Monitor, Layers, Send, User, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
+import { Code2, Palette, Zap, Github, Linkedin, Mail, FileDown, Target, Rocket, Monitor, Layers, Send, User, MessageSquare, CheckCircle, AlertCircle, Handshake } from 'lucide-react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from '../contexts/LanguageContext';
@@ -94,7 +94,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
               <button
                 onClick={() => onNavigate('projects')}
-                className="px-10 py-5 rounded-full text-lg glass-strong hover:bg-gradient-to-r hover:from-[#679436] hover:to-[#05668D] transition-all duration-200"
+                className="px-10 py-5 rounded-full text-lg glass-strong border border-white/10 hover:border-[#7AAA4A]/60 hover:text-[#7AAA4A] hover:scale-105 transition-all duration-300"
               >
                 {t('HomePage.hero.cta')}
               </button>
@@ -193,6 +193,35 @@ export function HomePage({ onNavigate }: HomePageProps) {
               <div className="flex flex-wrap gap-2">
                 {(t('HomePage.skills.design.tech') as string[]).map((tech, index) => (
                   <span key={index} className="px-4 py-2 rounded-full bg-[#05668D]/10 text-[#1A7A9E] text-sm">{tech}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Project Management & Collaboration */}
+            <div className="md:col-span-2 glass rounded-3xl p-10 hover:glass-strong transition-all duration-200 border border-white/10 group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-4 rounded-2xl bg-gradient-to-br from-[#679436]/20 to-[#05668D]/10 group-hover:from-[#679436]/30 group-hover:to-[#05668D]/20 transition-all duration-200">
+                  <Handshake className="w-10 h-10 text-[#7AAA4A]" />
+                </div>
+                <h3 className="text-3xl text-[#F2F2F2]">{t('HomePage.skills.projectMgmt.title')}</h3>
+              </div>
+
+              <p className="text-lg text-[#A0A0A0] mb-6 leading-relaxed">
+                {t('HomePage.skills.projectMgmt.description')}
+              </p>
+
+              <ul className="space-y-3 mb-8">
+                {(t('HomePage.skills.projectMgmt.features') as string[]).map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3 text-[#A0A0A0]">
+                    <span className="text-[#7AAA4A] mt-1">✓</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex flex-wrap gap-2">
+                {(t('HomePage.skills.projectMgmt.tags') as string[]).map((tag, index) => (
+                  <span key={index} className="px-4 py-2 rounded-full bg-[#679436]/10 text-[#7AAA4A] text-sm">{tag}</span>
                 ))}
               </div>
             </div>
@@ -363,7 +392,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <div className="space-y-4">
                   <a
                     href="mailto:nathan.5courcelle@gmail.com"
-                    className="flex items-center gap-4 p-4 glass-strong rounded-full hover:bg-gradient-to-r hover:from-[#679436]/20 hover:to-[#05668D]/20 transition-all duration-200"
+                    className="flex items-center gap-4 p-4 glass-strong rounded-full cursor-pointer"
                   >
                     <Mail className="w-6 h-6 text-[#679436]" />
                     <span className="text-[#F2F2F2]">nathan.5courcelle@gmail.com</span>
@@ -373,7 +402,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     href="https://github.com/fluteABec"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 glass-strong rounded-full hover:bg-gradient-to-r hover:from-[#679436]/20 hover:to-[#05668D]/20 transition-all duration-200"
+                    className="flex items-center gap-4 p-4 glass-strong rounded-full cursor-pointer"
                   >
                     <Github className="w-6 h-6 text-[#05668D]" />
                     <span className="text-[#F2F2F2]">{t('HomePage.contact.github')}</span>
@@ -383,7 +412,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     href="https://www.linkedin.com/in/nathan-courcelle"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 glass-strong rounded-full hover:bg-gradient-to-r hover:from-[#679436]/20 hover:to-[#05668D]/20 transition-all duration-200"
+                    className="flex items-center gap-4 p-4 glass-strong rounded-full cursor-pointer"
                   >
                     <Linkedin className="w-6 h-6 text-[#679436]" />
                     <span className="text-[#F2F2F2]">{t('HomePage.contact.linkedin')}</span>
@@ -393,7 +422,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
               <button
                 onClick={() => onNavigate('cv')}
-                className="w-full px-8 py-6 rounded-full glass-strong hover:bg-gradient-to-r hover:from-[#679436] hover:to-[#05668D] transition-all duration-200 flex items-center justify-center gap-3"
+                className="w-full px-8 py-6 rounded-full glass-strong cursor-pointer flex items-center justify-center gap-3"
               >
                 <FileDown className="w-6 h-6" />
                 <span>{t('HomePage.contact.cv')}</span>

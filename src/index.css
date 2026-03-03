@@ -1567,6 +1567,12 @@ html {
   backdrop-filter: blur(20px);
   background: #ffffff1a;
   border: 1px solid #ffffff26;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-strong:hover {
+  background: #ffffff30;
+  border-color: #ffffff40;
 }
 
 .gradient-primary {

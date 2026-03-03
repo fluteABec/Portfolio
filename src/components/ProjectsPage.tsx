@@ -80,13 +80,14 @@ export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
             <div className="glass rounded-3xl overflow-hidden hover:glass-strong transition-all duration-300">
               <div className="grid md:grid-cols-2 gap-0">
                 <div 
-                  className="relative h-80 md:h-[500px] overflow-hidden cursor-pointer"
+                  className="relative overflow-hidden cursor-pointer"
+                  style={{ height: '500px', backgroundColor: '#000' }}
                   onClick={() => onNavigate(projects[0].slug)}
                 >
                   <img
                     src={projects[0].image}
                     alt={projects[0].title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                   />
                   <div className={`absolute inset-0 bg-gradient-to-br ${projects[0].color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
                 </div>
@@ -128,13 +129,14 @@ export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
               <div key={project.id} className="group">
                 <div className="glass rounded-3xl overflow-hidden hover:glass-strong transition-all duration-300 h-full">
                   <div 
-                    className="relative h-64 overflow-hidden cursor-pointer"
+                    className="relative overflow-hidden cursor-pointer"
+                    style={{ height: '16rem', backgroundColor: '#000' }}
                     onClick={() => onNavigate(project.slug)}
                   >
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                     />
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
                   </div>

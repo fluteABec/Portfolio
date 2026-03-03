@@ -44,7 +44,6 @@ export function CVPage() {
             {t('CVPage.name')}
           </h1>
           <p className="text-2xl text-[#F2F2F2] mb-3">{t('CVPage.title')}</p>
-          <p className="text-lg text-[#A0A0A0] mb-6">{t('CVPage.age')}</p>
           
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-6 mb-8 text-[#A0A0A0]">
