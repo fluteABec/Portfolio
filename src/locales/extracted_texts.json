@@ -9,7 +9,7 @@
     },
     "skills": {
       "title": "Mon savoir-faire",
-      "subtitle": "Des solutions complètes, du design au déployement",
+      "subtitle": "Des solutions complètes, du design au déploiement",
       "webDev": {
         "title": "Développement Web",
         "description": "Conception de solutions web sur-mesure, de la simple page vitrine aux applications complexes",
@@ -99,11 +99,11 @@
   },
   "ProjectsPage": {
     "pageTitle": "Mes projets",
-    "subtitle": "Une sélection de projets réalisé dans un cadre universitaire ou purement personnel",
+    "subtitle": "Une sélection de projets réalisés dans un cadre universitaire, professionnel ou purement personnel",
     "projects": [
       {
         "title": "Cabanes et Yourtes de la Vallée de l'Ance",
-        "description": "Un site réalisé pour moderniser leur site web et le rendre plus utilisable avec une meilleure facilité d'accès à l'information, un projet qui vas de création de wireframe à déployement.",
+        "description": "Un site réalisé pour moderniser leur site web et le rendre plus utilisable avec une meilleure facilité d'accès à l'information, un projet qui va de la création du wireframe au déploiement.",
         "tags": [
           "HTML",
           "CSS",
@@ -139,6 +139,50 @@
         "description": "Projet conceptuel visant à révolutionner l'escalade grâce à l'IA et aux objets connectés. Site web vitrine présentant un écosystème complet d'analyse biomécanique et de coaching personnalisé.",
         "tags": [
           "FigmaMake",
+          "IA"
+        ],
+        "cta": "Voir le projet"
+      },
+      {
+        "title": "Landing page événementielle B&Business",
+        "description": "Landing page de réservation développée durant mon stage chez Powehi : paiement Stripe, formulaire dynamique, back-office et mini-CMS, déployée en production.",
+        "tags": [
+          "HTML",
+          "CSS",
+          "JS",
+          "PHP",
+          "Stripe",
+          "MySQL"
+        ],
+        "cta": "Voir le projet"
+      },
+      {
+        "title": "Identité visuelle Audit IA Act",
+        "description": "Création du logo du service Audit IA Act (audit de conformité à l'AI Act) et de ses déclinaisons, entre prototypage par IA générative et finalisation manuelle sous Affinity.",
+        "tags": [
+          "Affinity",
+          "IA générative",
+          "SVG"
+        ],
+        "cta": "Voir le projet"
+      },
+      {
+        "title": "Affiche Yohan Lidon",
+        "description": "Affiche promotionnelle conçue pour un partenariat commercial, prototypée par IA générative puis finalisée à la main.",
+        "tags": [
+          "Affinity",
+          "IA générative"
+        ],
+        "cta": "Voir le projet"
+      },
+      {
+        "title": "Léo — Agent IA de prospection",
+        "description": "Agent IA autonome de prospection LinkedIn (clone interne de Waalaxy) développé en stage : architecture microservices, rétro-ingénierie d'API, extension Chrome et dashboard de pilotage.",
+        "tags": [
+          "OpenClaw",
+          "Docker",
+          "Node.js",
+          "API Voyager",
           "IA"
         ],
         "cta": "Voir le projet"
@@ -197,7 +241,7 @@
           "MySQL",
           "phpMyAdmin",
           "VS Code",
-          "VS Studio 2022",
+          "Visual Studio 2022",
           "GitHub",
           "Figma",
           "Affinity",
@@ -521,10 +565,204 @@
     ],
     "ctaCode": "Voir le code"
   },
+  "BandBusinessPage": {
+    "backButton": "Retour aux projets",
+    "title": "Landing page événementielle B&Business",
+    "subtitle": "Page de réservation en ligne avec paiement et back-office, réalisée en stage chez Powehi",
+    "heroImageAlt": "Landing page B&Business",
+    "heroDescription": "Une landing page de réservation d'événement avec paiement Stripe, formulaire dynamique et panneau d'administration autonome.",
+    "techTitle": "Technologies",
+    "roleTitle": "Rôle",
+    "role": "Développeur full-stack front-end",
+    "yearTitle": "Année",
+    "year": "2025",
+    "aboutTitle": "Présentation du projet",
+    "aboutParagraphs": [
+      "Première mission de mon stage chez Powehi : concevoir et déployer une landing page de réservation pour un événement professionnel. L'objectif métier était d'automatiser la notification des inscriptions et des paiements, en temps réel, pour le client comme pour l'organisateur.",
+      "J'ai réalisé l'intégration front-end (HTML, CSS, JavaScript), l'intégration du paiement via l'API Stripe (transactions, webhooks, calcul de la TVA et codes promotionnels) et l'envoi automatisé des emails transactionnels (facture et reçu) via PHPMailer en SMTP. Le formulaire est adaptatif : l'ajout dynamique de participants génère de nouveaux champs par manipulation du DOM.",
+      "J'ai ensuite développé un back-office sécurisé : un panneau d'administration avec éditeur d'emails WYSIWYG et prévisualisation en temps réel, puis un mini-CMS permettant au client de modifier les textes et images de la page sans toucher au code. Le projet a été déployé en production via un flux Git, avec une architecture front / back séparée pour la maintenabilité."
+    ],
+    "nrTitle": "Numérique responsable",
+    "nrItems": [
+      "Solution légère privilégiée à un CMS lourd (type WordPress) pour la performance",
+      "Architecture front / back séparée pour la lisibilité et la maintenabilité",
+      "Sécurisation des accès via .htaccess et variables d'environnement (.env)",
+      "Système de logs pour fiabiliser la réception des notifications",
+      "Gestion des secrets hors du dépôt Git (clés Stripe et SMTP)"
+    ],
+    "processGalleryTitle": "Réalisation du projet",
+    "processGalleryItems": [
+      {
+        "caption": "Panneau d'administration — éditeur d'emails WYSIWYG",
+        "alt": "Back-office B&Business"
+      }
+    ],
+    "finalGalleryTitle": "Rendu final",
+    "finalGalleryItems": [
+      {
+        "caption": "Email transactionnel avec facture",
+        "alt": "Mail facture Stripe"
+      }
+    ],
+    "featuresTitle": "Fonctionnalités principales",
+    "features": [
+      "Paiement en ligne sécurisé via Stripe (transactions et webhooks)",
+      "Calcul automatique de la TVA et gestion des codes promotionnels",
+      "Formulaire adaptatif avec ajout dynamique de participants",
+      "Envoi automatisé des emails de confirmation et factures (PHPMailer / SMTP)",
+      "Back-office avec éditeur d'emails WYSIWYG et prévisualisation en temps réel",
+      "Mini-CMS pour éditer textes et images sans modifier le code",
+      "Déploiement en production via Git (intégration continue)"
+    ],
+    "ctaSite": "Voir le site",
+    "ctaCode": "Voir le code"
+  },
+  "LogosAiActPage": {
+    "backButton": "Retour aux projets",
+    "title": "Identité visuelle Audit IA Act",
+    "subtitle": "Création du logo et des déclinaisons pour le service Audit IA Act, réalisée en stage",
+    "heroImageAlt": "Logo Audit IA Act",
+    "heroDescription": "Le logo du service Audit IA Act (audit de conformité au règlement européen sur l'IA) et ses déclinaisons, du prototypage par IA générative à la finalisation manuelle sous Affinity.",
+    "toolsTitle": "Outils",
+    "contextTitle": "Contexte",
+    "context": "Stage développement web — Powehi",
+    "objectiveTitle": "Objectif",
+    "objective": "Doter le service Audit IA Act d'une identité",
+    "aboutTitle": "Présentation du projet",
+    "aboutParagraphs": [
+      "Mission de direction artistique confiée durant mon stage chez Powehi : concevoir l'identité visuelle d'Audit IA Act, un service d'audit de conformité au règlement européen sur l'intelligence artificielle (AI Act) proposé par l'agence. Le travail a démarré par une phase de recherche et de prototypage, suivie d'une validation itérative avec mon tuteur.",
+      "Le logo a été décliné en versions claire et sombre, et en formats grand et petit pour s'adapter à tous les supports (site web, documents, rapports d'audit). J'ai combiné l'IA générative pour le prototypage rapide et une finalisation manuelle sous Affinity afin de garder le contrôle du rendu."
+    ],
+    "processGalleryTitle": "Réalisation du projet",
+    "processGalleryItems": [
+      {
+        "caption": "Planches de recherche et déclinaisons",
+        "alt": "Recherche logo Audit IA Act"
+      }
+    ],
+    "finalGalleryTitle": "Rendus finaux",
+    "finalGalleryItems": [
+      {
+        "caption": "Logo — version claire",
+        "alt": "Logo Audit IA Act clair"
+      },
+      {
+        "caption": "Logo — version sombre",
+        "alt": "Logo Audit IA Act sombre"
+      }
+    ],
+    "featuresTitle": "Détails du projet",
+    "features": [
+      "Déclinaisons claire / sombre pour tous les fonds",
+      "Formats grand et petit pour chaque usage (web, documents, rapports)",
+      "Prototypage assisté par IA générative",
+      "Finalisation manuelle sous Affinity",
+      "Logo vectoriel (SVG) pour une qualité parfaite à toutes les tailles",
+      "Cohérence avec l'identité du service Audit IA Act"
+    ],
+    "ctaSite": "Voir le site"
+  },
+  "AfficheYohanLidonPage": {
+    "backButton": "Retour aux projets",
+    "title": "Affiche promotionnelle Yohan Lidon",
+    "subtitle": "Visuel promotionnel pour un partenariat commercial, réalisé en stage",
+    "heroImageAlt": "Affiche promotionnelle Yohan Lidon",
+    "heroDescription": "Une affiche promotionnelle conçue pour un partenariat commercial, du prototypage par IA générative à la finalisation manuelle.",
+    "toolsTitle": "Outils",
+    "contextTitle": "Contexte",
+    "context": "Stage développement web — Powehi",
+    "objectiveTitle": "Objectif",
+    "objective": "Promouvoir une offre de partenariat (-15% TOP TEN)",
+    "aboutTitle": "Présentation du projet",
+    "aboutParagraphs": [
+      "Dans le cadre d'un partenariat commercial diffusé via le site de Yohan Lidon, j'ai conçu une affiche promotionnelle mettant en avant une offre de réduction (-15% chez TOP TEN).",
+      "Le visuel a été prototypé rapidement à l'aide d'une IA générative, puis finalisé manuellement pour aligner la composition, la typographie et les couleurs sur l'identité de la marque."
+    ],
+    "processGalleryTitle": "Réalisation du projet",
+    "processGalleryItems": [
+      {
+        "caption": "Prototypage et finalisation du visuel",
+        "alt": "Création affiche"
+      }
+    ],
+    "finalGalleryTitle": "Rendu final",
+    "finalGalleryItems": [
+      {
+        "caption": "Affiche promotionnelle finalisée",
+        "alt": "Affiche Yohan Lidon"
+      }
+    ],
+    "featuresTitle": "Détails du projet",
+    "features": [
+      "Mise en avant claire de l'offre promotionnelle (-15%)",
+      "Prototypage rapide par IA générative",
+      "Finalisation manuelle de la composition et de la typographie",
+      "Alignement sur l'identité visuelle du partenaire"
+    ],
+    "ctaSite": "Voir le site"
+  },
+  "LeoAgentPage": {
+    "backButton": "Retour aux projets",
+    "title": "Léo — Agent IA de prospection",
+    "subtitle": "Agent IA de prospection LinkedIn (clone interne de Waalaxy), réalisé en stage chez Powehi",
+    "heroImageAlt": "Dashboard de l'agent Léo",
+    "heroDescription": "Un agent IA autonome qui automatise la prospection LinkedIn de l'agence, piloté depuis un dashboard web — développé pour remplacer un abonnement SaaS payant.",
+    "techTitle": "Technologies",
+    "roleTitle": "Rôle",
+    "role": "Développeur full-stack & R&D IA",
+    "yearTitle": "Année",
+    "year": "2025",
+    "aboutTitle": "Présentation du projet",
+    "aboutParagraphs": [
+      "Projet principal et fil rouge de mon stage chez Powehi : concevoir un agent IA de prospection et de community management sur LinkedIn, incarné par un persona virtuel (« Léo Copain »). L'objectif était de doter l'agence d'un outil interne capable d'automatiser la prospection, pour s'affranchir des abonnements SaaS coûteux (type Waalaxy).",
+      "L'agent (plateforme OpenClaw) tourne sur un VPS conteneurisé (Docker) et s'appuie sur des LLM (Mistral, puis GPT-4.1-mini). J'ai conçu une architecture en microservices : l'IA orchestre, et un microservice déterministe exécute les actions LinkedIn via l'API interne Voyager (obtenue par rétro-ingénierie) et une extension Chrome maison (Manifest V3) qui fait transiter les requêtes par l'IP résidentielle de l'utilisateur pour rester indiscernable d'un comportement humain.",
+      "Côté fonctionnel : création de campagnes guidée par un Wizard (pour garantir le déterminisme), scraping, scoring et mise en cache des prospects, classification d'intention des réponses (NLP), mémoire contextuelle par prospect, garde-fous (blacklist RGPD, brouillons validés par l'humain), rapports automatisés (CRON) et pilotage multi-canal (dashboard web, Telegram, Discord). L'outil a permis à l'agence de résilier son abonnement Waalaxy."
+    ],
+    "nrTitle": "Numérique responsable",
+    "nrItems": [
+      "Cache local mutualisé des profils pour réduire fortement les requêtes réseau sortantes",
+      "Optimisation des payloads : -80% de tokens consommés par le LLM",
+      "Exploration de modèles open-source en local (indépendance et sobriété)",
+      "Déduplication des données pour éviter les traitements redondants",
+      "Délais aléatoires et quotas pour limiter la charge sur les plateformes tierces"
+    ],
+    "processGalleryTitle": "Réalisation du projet",
+    "processGalleryItems": [
+      {
+        "caption": "Architecture microservices & extension Chrome",
+        "alt": "Architecture de l'agent Léo"
+      }
+    ],
+    "finalGalleryTitle": "Rendus finaux",
+    "finalGalleryItems": [
+      {
+        "caption": "Dashboard — gestion des campagnes",
+        "alt": "Dashboard campagnes Léo"
+      },
+      {
+        "caption": "Listes de prospects scrapés avec scoring",
+        "alt": "Prospects Léo"
+      }
+    ],
+    "featuresTitle": "Fonctionnalités principales",
+    "features": [
+      "Persona virtuel « Léo Copain » pilotant la prospection en autonomie",
+      "Architecture microservices : IA orchestratrice + exécution déterministe",
+      "Automatisation LinkedIn via l'API interne Voyager (rétro-ingénierie)",
+      "Extension Chrome (Manifest V3) pour des requêtes indiscernables d'un humain",
+      "Création de campagnes guidée par Wizard",
+      "Scraping, scoring et cache de prospects (lead generation)",
+      "Classification d'intention des réponses (NLP) et mémoire par prospect",
+      "Garde-fous : blacklist RGPD et brouillons validés par l'humain (human-in-the-loop)",
+      "Rapports automatisés (CRON) et pilotage multi-canal (web, Telegram, Discord)"
+    ],
+    "ctaSite": "Voir l'application",
+    "ctaCode": "Voir le code"
+  },
   "Footer": {
     "copyright": "© 2025 Nathan Courcelle. All rights reserved.",
     "email": "nathan.5courcelle@gmail.com",
-    "role": "Devoloppeur Front-End",
+    "role": "Développeur Front-End",
     "country": "France"
   }
 }

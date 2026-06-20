@@ -142,6 +142,50 @@
           "AI"
         ],
         "cta": "View project"
+      },
+      {
+        "title": "B&Business event landing page",
+        "description": "Booking landing page built during my internship at Powehi: Stripe payment, dynamic form, back-office and mini-CMS, deployed to production.",
+        "tags": [
+          "HTML",
+          "CSS",
+          "JS",
+          "PHP",
+          "Stripe",
+          "MySQL"
+        ],
+        "cta": "View project"
+      },
+      {
+        "title": "Audit IA Act visual identity",
+        "description": "Design of the Audit IA Act service logo (EU AI Act compliance audit) and its variants, between generative-AI prototyping and manual finishing in Affinity.",
+        "tags": [
+          "Affinity",
+          "Generative AI",
+          "SVG"
+        ],
+        "cta": "View project"
+      },
+      {
+        "title": "Yohan Lidon poster",
+        "description": "Promotional poster designed for a commercial partnership, prototyped with generative AI then finalized by hand.",
+        "tags": [
+          "Affinity",
+          "Generative AI"
+        ],
+        "cta": "View project"
+      },
+      {
+        "title": "Léo — AI prospecting agent",
+        "description": "Autonomous LinkedIn prospecting AI agent (in-house Waalaxy clone) built during my internship: microservices architecture, API reverse engineering, Chrome extension and a control dashboard.",
+        "tags": [
+          "OpenClaw",
+          "Docker",
+          "Node.js",
+          "Voyager API",
+          "AI"
+        ],
+        "cta": "View project"
       }
     ],
     "ctaContact": "Contact Me",
@@ -197,7 +241,7 @@
           "MySQL",
           "phpMyAdmin",
           "VS Code",
-          "VS Studio 2022",
+          "Visual Studio 2022",
           "GitHub",
           "Figma",
           "Affinity",
@@ -519,6 +563,200 @@
       "Route creation tools for route setters",
       "Load and technique analysis"
     ],
+    "ctaCode": "View code"
+  },
+  "BandBusinessPage": {
+    "backButton": "Back to projects",
+    "title": "B&Business event landing page",
+    "subtitle": "Online booking page with payment and back-office, built during my internship at Powehi",
+    "heroImageAlt": "B&Business landing page",
+    "heroDescription": "An event booking landing page with Stripe payment, a dynamic form and a standalone admin panel.",
+    "techTitle": "Technologies",
+    "roleTitle": "Role",
+    "role": "Full-stack front-end developer",
+    "yearTitle": "Year",
+    "year": "2025",
+    "aboutTitle": "Project overview",
+    "aboutParagraphs": [
+      "First mission of my internship at Powehi: design and deploy a booking landing page for a professional event. The business goal was to automate registration and payment notifications, in real time, for both the client and the organizer.",
+      "I handled the front-end integration (HTML, CSS, JavaScript), the payment integration through the Stripe API (transactions, webhooks, VAT calculation and promo codes) and the automated sending of transactional emails (invoice and receipt) via PHPMailer over SMTP. The form is adaptive: dynamically adding participants generates new fields through DOM manipulation.",
+      "I then built a secure back-office: an admin panel with a WYSIWYG email editor and real-time preview, then a mini-CMS letting the client edit the page's text and images without touching the code. The project was deployed to production through a Git workflow, with a separated front / back architecture for maintainability."
+    ],
+    "nrTitle": "Responsible digital",
+    "nrItems": [
+      "Lightweight solution chosen over a heavy CMS (such as WordPress) for performance",
+      "Separated front / back architecture for readability and maintainability",
+      "Access hardening via .htaccess and environment variables (.env)",
+      "Logging system to ensure notifications are received reliably",
+      "Secrets kept out of the Git repository (Stripe and SMTP keys)"
+    ],
+    "processGalleryTitle": "Project process",
+    "processGalleryItems": [
+      {
+        "caption": "Admin panel — WYSIWYG email editor",
+        "alt": "B&Business back-office"
+      }
+    ],
+    "finalGalleryTitle": "Final result",
+    "finalGalleryItems": [
+      {
+        "caption": "Transactional email with invoice",
+        "alt": "Stripe invoice email"
+      }
+    ],
+    "featuresTitle": "Key features",
+    "features": [
+      "Secure online payment via Stripe (transactions and webhooks)",
+      "Automatic VAT calculation and promo code handling",
+      "Adaptive form with dynamic participant addition",
+      "Automated confirmation emails and invoices (PHPMailer / SMTP)",
+      "Back-office with WYSIWYG email editor and real-time preview",
+      "Mini-CMS to edit text and images without changing the code",
+      "Production deployment via Git (continuous integration)"
+    ],
+    "ctaSite": "View site",
+    "ctaCode": "View code"
+  },
+  "LogosAiActPage": {
+    "backButton": "Back to projects",
+    "title": "Audit IA Act visual identity",
+    "subtitle": "Design of the logo and variants for the Audit IA Act service, made during my internship",
+    "heroImageAlt": "Audit IA Act logo",
+    "heroDescription": "The logo of the Audit IA Act service (EU AI Act compliance audit) and its variants, from generative-AI prototyping to manual finishing in Affinity.",
+    "toolsTitle": "Tools",
+    "contextTitle": "Context",
+    "context": "Web development internship — Powehi",
+    "objectiveTitle": "Objective",
+    "objective": "Give the Audit IA Act service an identity",
+    "aboutTitle": "Project overview",
+    "aboutParagraphs": [
+      "An art-direction mission assigned during my internship at Powehi: design the visual identity of Audit IA Act, a compliance-audit service for the European AI regulation (AI Act) offered by the agency. The work started with a research and prototyping phase, followed by iterative validation with my supervisor.",
+      "The logo was declined into light and dark versions, and large and small formats to fit every medium (website, documents, audit reports). I combined generative AI for fast prototyping with manual finishing in Affinity to keep control over the result."
+    ],
+    "processGalleryTitle": "Project process",
+    "processGalleryItems": [
+      {
+        "caption": "Research boards and variants",
+        "alt": "Audit IA Act logo research"
+      }
+    ],
+    "finalGalleryTitle": "Final results",
+    "finalGalleryItems": [
+      {
+        "caption": "Logo — light version",
+        "alt": "Audit IA Act logo light"
+      },
+      {
+        "caption": "Logo — dark version",
+        "alt": "Audit IA Act logo dark"
+      }
+    ],
+    "featuresTitle": "Project details",
+    "features": [
+      "Light / dark variants for every background",
+      "Large and small formats for each use (web, documents, reports)",
+      "Generative-AI assisted prototyping",
+      "Manual finishing in Affinity",
+      "Vector logo (SVG) for perfect quality at any size",
+      "Consistency with the Audit IA Act service identity"
+    ],
+    "ctaSite": "View site"
+  },
+  "AfficheYohanLidonPage": {
+    "backButton": "Back to projects",
+    "title": "Yohan Lidon promotional poster",
+    "subtitle": "Promotional visual for a commercial partnership, made during my internship",
+    "heroImageAlt": "Yohan Lidon promotional poster",
+    "heroDescription": "A promotional poster designed for a commercial partnership, from generative-AI prototyping to manual finishing.",
+    "toolsTitle": "Tools",
+    "contextTitle": "Context",
+    "context": "Web development internship — Powehi",
+    "objectiveTitle": "Objective",
+    "objective": "Promote a partnership offer (-15% TOP TEN)",
+    "aboutTitle": "Project overview",
+    "aboutParagraphs": [
+      "As part of a commercial partnership broadcast through Yohan Lidon's website, I designed a promotional poster highlighting a discount offer (-15% at TOP TEN).",
+      "The visual was quickly prototyped using a generative AI, then finalized by hand to align the composition, typography and colors with the brand's identity."
+    ],
+    "processGalleryTitle": "Project process",
+    "processGalleryItems": [
+      {
+        "caption": "Prototyping and finishing of the visual",
+        "alt": "Poster creation"
+      }
+    ],
+    "finalGalleryTitle": "Final result",
+    "finalGalleryItems": [
+      {
+        "caption": "Finalized promotional poster",
+        "alt": "Yohan Lidon poster"
+      }
+    ],
+    "featuresTitle": "Project details",
+    "features": [
+      "Clear highlighting of the promotional offer (-15%)",
+      "Fast prototyping with generative AI",
+      "Manual finishing of composition and typography",
+      "Alignment with the partner's visual identity"
+    ],
+    "ctaSite": "View site"
+  },
+  "LeoAgentPage": {
+    "backButton": "Back to projects",
+    "title": "Léo — AI prospecting agent",
+    "subtitle": "LinkedIn prospecting AI agent (in-house Waalaxy clone), built during my internship at Powehi",
+    "heroImageAlt": "Léo agent dashboard",
+    "heroDescription": "An autonomous AI agent automating the agency's LinkedIn prospecting, driven from a web dashboard — built to replace a paid SaaS subscription.",
+    "techTitle": "Technologies",
+    "roleTitle": "Role",
+    "role": "Full-stack developer & AI R&D",
+    "yearTitle": "Year",
+    "year": "2025",
+    "aboutTitle": "Project overview",
+    "aboutParagraphs": [
+      "The main project and common thread of my internship at Powehi: build an AI prospecting and community-management agent for LinkedIn, embodied by a virtual persona (\"Léo Copain\"). The goal was to give the agency an in-house tool able to automate prospecting, freeing it from costly SaaS subscriptions (such as Waalaxy).",
+      "The agent (OpenClaw platform) runs on a containerized VPS (Docker) and relies on LLMs (Mistral, then GPT-4.1-mini). I designed a microservices architecture: the AI orchestrates, while a deterministic microservice executes LinkedIn actions through the internal Voyager API (obtained by reverse engineering) and a custom Chrome extension (Manifest V3) that routes requests through the user's residential IP to remain indistinguishable from human behavior.",
+      "On the functional side: Wizard-guided campaign creation (to guarantee determinism), prospect scraping, scoring and caching, intent classification of replies (NLP), per-prospect contextual memory, safeguards (GDPR blacklist, human-validated drafts), automated reports (CRON) and multi-channel control (web dashboard, Telegram, Discord). The tool allowed the agency to cancel its Waalaxy subscription."
+    ],
+    "nrTitle": "Responsible digital",
+    "nrItems": [
+      "Shared local profile cache to strongly reduce outgoing network requests",
+      "Payload optimization: -80% tokens consumed by the LLM",
+      "Exploration of local open-source models (independence and frugality)",
+      "Data deduplication to avoid redundant processing",
+      "Randomized delays and quotas to limit load on third-party platforms"
+    ],
+    "processGalleryTitle": "Project process",
+    "processGalleryItems": [
+      {
+        "caption": "Microservices architecture & Chrome extension",
+        "alt": "Léo agent architecture"
+      }
+    ],
+    "finalGalleryTitle": "Final results",
+    "finalGalleryItems": [
+      {
+        "caption": "Dashboard — campaign management",
+        "alt": "Léo campaigns dashboard"
+      },
+      {
+        "caption": "Scraped prospect lists with scoring",
+        "alt": "Léo prospects"
+      }
+    ],
+    "featuresTitle": "Key features",
+    "features": [
+      "Virtual persona \"Léo Copain\" running prospecting autonomously",
+      "Microservices architecture: orchestrating AI + deterministic execution",
+      "LinkedIn automation through the internal Voyager API (reverse engineering)",
+      "Chrome extension (Manifest V3) for requests indistinguishable from a human",
+      "Wizard-guided campaign creation",
+      "Prospect scraping, scoring and caching (lead generation)",
+      "Reply intent classification (NLP) and per-prospect memory",
+      "Safeguards: GDPR blacklist and human-validated drafts (human-in-the-loop)",
+      "Automated reports (CRON) and multi-channel control (web, Telegram, Discord)"
+    ],
+    "ctaSite": "View the app",
     "ctaCode": "View code"
   },
   "Footer": {

@@ -49,6 +49,46 @@ export function ProjectsPage({ onNavigate }: ProjectsPageProps) {
       tags: projectsData[3].tags,
       cta: projectsData[3].cta,
       color: 'from-[#7A4ACB] to-[#4A90E2]'
+    },
+    {
+      id: 5,
+      slug: 'project-bandbusiness',
+      title: projectsData[4].title,
+      description: projectsData[4].description,
+      image: '/images/Site-BAB-hero.avif',
+      tags: projectsData[4].tags,
+      cta: projectsData[4].cta,
+      color: 'from-[#05668D] to-[#679436]'
+    },
+    {
+      id: 6,
+      slug: 'project-logos',
+      title: projectsData[5].title,
+      description: projectsData[5].description,
+      image: '/images/Logo-AiAct-hero.avif',
+      tags: projectsData[5].tags,
+      cta: projectsData[5].cta,
+      color: 'from-[#7A4ACB] to-[#05668D]'
+    },
+    {
+      id: 7,
+      slug: 'project-affiche',
+      title: projectsData[6].title,
+      description: projectsData[6].description,
+      image: '/images/Affiche-YohanLidon-hero.avif',
+      tags: projectsData[6].tags,
+      cta: projectsData[6].cta,
+      color: 'from-[#679436] to-[#7AAA4A]'
+    },
+    {
+      id: 8,
+      slug: 'project-leo',
+      title: projectsData[7].title,
+      description: projectsData[7].description,
+      image: '/images/Site-Leo-hero.avif',
+      tags: projectsData[7].tags,
+      cta: projectsData[7].cta,
+      color: 'from-[#05668D] to-[#7A4ACB]'
     }
   ];
   return (

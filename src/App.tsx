@@ -8,6 +8,10 @@ import { CabanesYourtesPage } from './components/CabanesYourtesPage';
 import { IUTDefensePage } from './components/IUTDefensePage';
 import { UIDesignPosterPage } from './components/UIDesignPosterPage';
 import { ClimbImprovePage } from './components/ClimbImprovePage';
+import { BandBusinessPage } from './components/BandBusinessPage';
+import { LogosAiActPage } from './components/LogosAiActPage';
+import { AfficheYohanLidonPage } from './components/AfficheYohanLidonPage';
+import { LeoAgentPage } from './components/LeoAgentPage';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -44,6 +48,10 @@ export default function App() {
             {currentPage === 'project-iut' && <IUTDefensePage onBack={() => setCurrentPage('projects')} />}
             {currentPage === 'project-poster' && <UIDesignPosterPage onBack={() => setCurrentPage('projects')} />}
             {currentPage === 'project-climbimprove' && <ClimbImprovePage onBack={() => setCurrentPage('projects')} />}
+            {currentPage === 'project-bandbusiness' && <BandBusinessPage onBack={() => setCurrentPage('projects')} />}
+            {currentPage === 'project-logos' && <LogosAiActPage onBack={() => setCurrentPage('projects')} />}
+            {currentPage === 'project-affiche' && <AfficheYohanLidonPage onBack={() => setCurrentPage('projects')} />}
+            {currentPage === 'project-leo' && <LeoAgentPage onBack={() => setCurrentPage('projects')} />}
           </main>
 
           <Footer />
